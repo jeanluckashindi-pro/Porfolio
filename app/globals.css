@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* Google Dark Mode - Couleurs officielles */
+  --background: #171717;
+  --surface: #303134;
+  --on-surface: #e8eaed;
+  --on-surface-variant: #9aa0a6;
+  
+  /* Les deux couleurs de fond Google */
+  --card-1: #19191b;
+  --card-2: #262728;
+  
+  /* Couleurs d'accent Google */
+  --primary: #184ef2;
+  --secondary: #81c995;
+  --tertiary: #fdd663;
+  --error: #f28b82;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-card-1: var(--card-1);
+  --color-card-2: var(--card-2);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-error: var(--error);
+  --font-sans: var(--font-open-sans);
+  --font-anton: var(--font-anton);
+  --font-antonio: var(--font-antonio);
+  --font-kaushan: var(--font-kaushan-script);
+  --font-ubuntu: var(--font-ubuntu);
+}
+
+body {
+  background: var(--card-1);
+  color: var(--on-surface);
+  font-family: var(--font-open-sans), sans-serif;
+}
