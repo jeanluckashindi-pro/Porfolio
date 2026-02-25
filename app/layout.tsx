@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Anton, Antonio, Kaushan_Script, Ubuntu } from "next/font/google";
 import "./globals.css";
+import SpineSpokeAnimation from "./components/SpineSpokeAnimation";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${anton.variable} ${antonio.variable} ${kaushanScript.variable} ${ubuntu.variable} antialiased`}
       >
+        <SpineSpokeAnimation />
         {children}
       </body>
     </html>

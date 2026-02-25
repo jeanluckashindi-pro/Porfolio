@@ -2,17 +2,17 @@
 
 :root {
   /* Google Dark Mode - Couleurs officielles */
-  --background: #171717;
-  --surface: #303134;
+  --background: #131313;
+  --surface: #1c1c1c;
   --on-surface: #e8eaed;
   --on-surface-variant: #9aa0a6;
   
   /* Les deux couleurs de fond Google */
-  --card-1: #19191b;
-  --card-2: #262728;
+  --card-1: #131313;
+  --card-2: #1c1c1c;
   
   /* Couleurs d'accent Google */
-  --primary: #184ef2;
+  --primary: #8ab4f8;
   --secondary: #81c995;
   --tertiary: #fdd663;
   --error: #f28b82;
@@ -40,4 +40,59 @@ body {
   background: var(--card-1);
   color: var(--on-surface);
   font-family: var(--font-open-sans), sans-serif;
+}
+
+/* Animation Spine Spoke pour les boutons */
+button, a[href] {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes spokeExpand {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* Spinner Spoke CSS Animation */
+.spinner-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner-spoke {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 10px;
+  height: 35px;
+  margin-left: -5px;
+  background: var(--color-primary);
+  border-radius: 5px;
+  transform-origin: 5px 60px;
+  animation: spokeOpacity 1s linear infinite;
+}
+
+@keyframes spokeOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
