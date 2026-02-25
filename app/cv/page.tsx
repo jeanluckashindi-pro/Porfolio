@@ -2,10 +2,9 @@
 
 import { useState } from 'react';
 import Header from "../components/Header";
-import { FileText, Download, Eye, Briefcase, Code, Award, Mail, Phone, MapPin } from "lucide-react";
-import { Dialog } from 'primereact/dialog';
-import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
-import { CVDocument } from '../components/CVDocument';
+import PDFDownloadButton from "../components/PDFDownloadButton";
+import PDFViewerDialog from "../components/PDFViewerDialog";
+import { FileText, Eye, Briefcase, Code, Award, Mail, Phone, MapPin } from "lucide-react";
 import 'primereact/resources/themes/lara-dark-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 
@@ -42,18 +41,7 @@ export default function CVPage() {
                 Visualiser le PDF
               </button>
               
-              <PDFDownloadLink
-                document={<CVDocument />}
-                fileName="CV_Jean-Luc_Kashindi_Nestor.pdf"
-                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/5 transition-all"
-              >
-                {({ loading }) => (
-                  <>
-                    <Download className="w-5 h-5" />
-                    {loading ? 'Génération...' : 'Télécharger PDF'}
-                  </>
-                )}
-              </PDFDownloadLink>
+              <PDFDownloadButton />
             </div>
           </div>
         </section>
@@ -164,20 +152,10 @@ export default function CVPage() {
         </section>
 
         {/* PDF Viewer Dialog */}
-        <Dialog
-          header="Curriculum Vitae - Jean-Luc Kashindi Nestor"
-          visible={showPDFDialog}
-          style={{ width: '90vw', height: '90vh' }}
-          onHide={() => setShowPDFDialog(false)}
-          maximizable
-          modal
-        >
-          <div style={{ width: '100%', height: 'calc(90vh - 100px)' }}>
-            <PDFViewer width="100%" height="100%" showToolbar={true}>
-              <CVDocument />
-            </PDFViewer>
-          </div>
-        </Dialog>
+        <PDFViewerDialog 
+          visible={showPDFDialog} 
+          onHide={() => setShowPDFDialog(false)} 
+        />
       </main>
     </>
   );
