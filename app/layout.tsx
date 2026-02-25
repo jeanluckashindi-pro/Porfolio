@@ -52,7 +52,6 @@ export default function RootLayout({
         className={`${openSans.variable} ${anton.variable} ${antonio.variable} ${kaushanScript.variable} ${ubuntu.variable} antialiased`}
       >
         <LoadingBar />
-        <SpineSpokeAnimation />
         {children}
       </body>
     </html>

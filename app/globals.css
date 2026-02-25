@@ -51,20 +51,14 @@ button, a[href] {
 /* Spinner Spoke CSS Animation */
 .spinner-container {
   position: relative;
-  width: 120px;
-  height: 120px;
+  display: inline-block;
 }
 
 .spinner-spoke {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 10px;
-  height: 35px;
-  margin-left: -5px;
-  background: var(--color-primary);
-  border-radius: 5px;
-  transform-origin: 5px 60px;
+  background: currentColor;
   animation: spokeOpacity 1s linear infinite;
 }
 

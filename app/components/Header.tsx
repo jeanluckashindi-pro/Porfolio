@@ -163,25 +163,26 @@ export default function Header() {
                     }`}
                   >
                     {loadingButton === item.href ? (
-                      <div className="flex items-center gap-2">
-                        <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
-                          {[...Array(8)].map((_, i) => (
-                            <div
-                              key={i}
-                              className="spinner-spoke"
-                              style={{
-                                width: '1.5px',
-                                height: '6px',
-                                marginLeft: '-0.75px',
-                                borderRadius: '0.75px',
-                                background: 'currentColor',
-                                transform: `rotate(${i * 45}deg)`,
-                                transformOrigin: '0.75px 8px',
-                                animationDelay: `${-(i / 8)}s`,
-                              }}
-                            />
-                          ))}
-                        </div>
+                      <div className="spinner-container relative" style={{ width: '16px', height: '16px' }}>
+                        {[...Array(8)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="spinner-spoke"
+                            style={{
+                              position: 'absolute',
+                              left: '50%',
+                              top: '0',
+                              width: '1.5px',
+                              height: '6px',
+                              marginLeft: '-0.75px',
+                              borderRadius: '0.75px',
+                              background: 'currentColor',
+                              transform: `rotate(${i * 45}deg)`,
+                              transformOrigin: '0.75px 8px',
+                              animationDelay: `${-(i / 8)}s`,
+                            }}
+                          />
+                        ))}
                       </div>
                     ) : (
                       <>
@@ -218,12 +219,15 @@ export default function Header() {
                             >
                               {loadingButton === subItem.href ? (
                                 <div className="mt-0.5 p-2 rounded-md bg-white/5">
-                                  <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
+                                  <div className="spinner-container relative" style={{ width: '16px', height: '16px' }}>
                                     {[...Array(8)].map((_, i) => (
                                       <div
                                         key={i}
                                         className="spinner-spoke"
                                         style={{
+                                          position: 'absolute',
+                                          left: '50%',
+                                          top: '0',
                                           width: '1.5px',
                                           height: '6px',
                                           marginLeft: '-0.75px',
@@ -350,12 +354,15 @@ export default function Header() {
                               >
                                 {loadingButton === subItem.href ? (
                                   <div className="mt-0.5 p-1.5 rounded-md bg-white/5">
-                                    <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
+                                    <div className="spinner-container relative" style={{ width: '16px', height: '16px' }}>
                                       {[...Array(8)].map((_, i) => (
                                         <div
                                           key={i}
                                           className="spinner-spoke"
                                           style={{
+                                            position: 'absolute',
+                                            left: '50%',
+                                            top: '0',
                                             width: '1.5px',
                                             height: '6px',
                                             marginLeft: '-0.75px',
@@ -393,12 +400,15 @@ export default function Header() {
                       }`}
                     >
                       {loadingButton === item.href ? (
-                        <div className="spinner-container" style={{ width: '20px', height: '20px' }}>
+                        <div className="spinner-container relative" style={{ width: '20px', height: '20px' }}>
                           {[...Array(8)].map((_, i) => (
                             <div
                               key={i}
                               className="spinner-spoke"
                               style={{
+                                position: 'absolute',
+                                left: '50%',
+                                top: '0',
                                 width: '2px',
                                 height: '8px',
                                 marginLeft: '-1px',
