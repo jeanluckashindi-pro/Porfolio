@@ -8,102 +8,158 @@ export default function Home() {
     <>
       <Header />
       <main className="pt-16 min-h-screen bg-card-1">
-        {/* Hero Section - Flex Layout */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-card-2 to-card-1">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.08),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.06),transparent_50%)]"></div>
+        {/* Hero Section - Redesigned */}
+        <section className="relative overflow-hidden bg-gradient-to-b from-card-2 via-card-1 to-card-1">
+          {/* Animated Background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.15),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
+          </div>
           
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 py-20 sm:py-32 relative">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-              {/* Left Column - Main Info */}
-              <div className="flex-1 w-full">
-                {/* Subtitle with gradient */}
-                <p className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary font-semibold mb-8">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-24 relative">
+            {/* Status Badge */}
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/30 rounded-full">
+                <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+                <span className="text-secondary text-sm font-medium">Disponible pour de nouveaux projets</span>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="text-center mb-12">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Jean-Luc Kashindi Nestor
+              </h1>
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
                   Ingénieur Fullstack Senior
-                </p>
+                </span>
+              </p>
+              <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+                Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>. 
+                Spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
+                par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
+              </p>
+            </div>
 
-                {/* Description */}
-                <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-8">
-                  Architecte de solutions numériques à fort impact. Spécialisé dans la conception et le déploiement 
-                  de systèmes utilisés à l'échelle nationale par des institutions gouvernementales et organisations internationales.
-                </p>
-
-                {/* Key Highlights */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-primary/30 transition-colors">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Building className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-white mb-1">Mediabox Burundi</div>
-                      <div className="text-xs text-white/60">Revendeur officiel Starlink</div>
-                    </div>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
+              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-primary/50">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Briefcase className="w-6 h-6 text-primary" />
                   </div>
-
-                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-secondary/30 transition-colors">
-                    <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Briefcase className="w-5 h-5 text-secondary" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-white mb-1">3+ ans d'expérience</div>
-                      <div className="text-xs text-white/60">Développement continu</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-tertiary/30 transition-colors">
-                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-5 h-5 text-tertiary" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-white mb-1">Bujumbura, Burundi</div>
-                      <div className="text-xs text-white/60">Basé en Afrique de l'Est</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
-                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Rocket className="w-5 h-5 text-white/60" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-white mb-1">Solutions à impact</div>
-                      <div className="text-xs text-white/60">Projets gouvernementaux</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="group inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-white/90 transition-all hover:scale-105">
-                    Démarrer un projet
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link href="/projets/professionnels" className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-8 py-4 rounded-lg font-medium border border-white/10 hover:bg-white/5 transition-all">
-                    Voir mes réalisations
-                  </Link>
+                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">3+</div>
+                  <div className="text-sm text-white/70 font-medium">Ans d'expérience</div>
+                  <div className="text-xs text-white/50 mt-1">Développement continu</div>
                 </div>
               </div>
 
-              {/* Right Column - Stats */}
-              <div className="w-full lg:w-auto lg:min-w-[500px]">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 rounded-xl p-5 hover:scale-105 transition-transform text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-primary mb-1">3+</div>
-                    <div className="text-xs text-white/70 leading-tight">Ans d'expérience</div>
+              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-secondary/50">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Rocket className="w-6 h-6 text-secondary" />
                   </div>
-                  <div className="bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 rounded-xl p-5 hover:scale-105 transition-transform text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-secondary mb-1">10+</div>
-                    <div className="text-xs text-white/70 leading-tight">Projets livrés</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-tertiary/20 to-tertiary/5 border border-tertiary/20 rounded-xl p-5 hover:scale-105 transition-transform text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-tertiary mb-1">5+</div>
-                    <div className="text-xs text-white/70 leading-tight">Technologies</div>
-                  </div>
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-xl p-5 hover:scale-105 transition-transform text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-white mb-1">100%</div>
-                    <div className="text-xs text-white/70 leading-tight">Satisfaction</div>
-                  </div>
+                  <div className="text-4xl sm:text-5xl font-bold text-secondary mb-2">15+</div>
+                  <div className="text-sm text-white/70 font-medium">Projets livrés</div>
+                  <div className="text-xs text-white/50 mt-1">Solutions déployées</div>
                 </div>
               </div>
+
+              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-tertiary/50">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Code className="w-6 h-6 text-tertiary" />
+                  </div>
+                  <div className="text-4xl sm:text-5xl font-bold text-tertiary mb-2">12+</div>
+                  <div className="text-sm text-white/70 font-medium">Technologies</div>
+                  <div className="text-xs text-white/50 mt-1">Stack moderne</div>
+                </div>
+              </div>
+
+              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-2xl p-6 hover:scale-105 transition-all hover:border-white/30">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                    <Award className="w-6 h-6 text-white/80" />
+                  </div>
+                  <div className="text-4xl sm:text-5xl font-bold text-white mb-2">100%</div>
+                  <div className="text-sm text-white/70 font-medium">Satisfaction</div>
+                  <div className="text-xs text-white/50 mt-1">Clients satisfaits</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Highlight Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
+              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-primary/30 transition-all hover:bg-card-2">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <Building className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-white">Mediabox Burundi</div>
+                    <div className="text-xs text-primary">Poste actuel</div>
+                  </div>
+                </div>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  Leader dans le développement de solutions numériques et revendeur officiel Starlink au Burundi
+                </p>
+              </div>
+
+              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-secondary/30 transition-all hover:bg-card-2">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-white">Projets Gouvernementaux</div>
+                    <div className="text-xs text-secondary">Échelle nationale</div>
+                  </div>
+                </div>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  ODECA (Café), ISP Starlink, solutions pour institutions publiques et organisations internationales
+                </p>
+              </div>
+
+              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-tertiary/30 transition-all hover:bg-card-2">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-tertiary" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-white">Architecture Microservices</div>
+                    <div className="text-xs text-tertiary">Expert technique</div>
+                  </div>
+                </div>
+                <p className="text-xs text-white/60 leading-relaxed">
+                  Conception de systèmes distribués scalables avec Spring Boot, React, Node.js, Angular
+                </p>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/contact" 
+                className="group inline-flex items-center justify-center gap-2 bg-white text-black px-10 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Démarrer un projet
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                href="/projets/professionnels" 
+                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-10 py-4 rounded-xl font-semibold border border-white/20 hover:bg-white/5 hover:border-white/30 transition-all"
+              >
+                Voir mes réalisations
+              </Link>
+              <Link 
+                href="/cv" 
+                className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white px-6 py-4 transition-colors"
+              >
+                <FileText className="w-5 h-5" />
+                Télécharger CV
+              </Link>
             </div>
           </div>
         </section>
@@ -435,14 +491,18 @@ export default function Home() {
                             <h4 className="text-lg font-bold text-white">Ufaranga</h4>
                             <p className="text-sm text-primary font-medium">Fondateur & Ingénieur Principal</p>
                           </div>
-                          <span className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-medium">Projet Personnel</span>
+                          <span className="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-medium">Projet Privé</span>
                         </div>
-                        <p className="text-xs text-white/50 mb-4">En cours de développement</p>
+                        <p className="text-xs text-white/50 mb-4">En pleine évolution • Développement actif</p>
                         <p className="text-sm text-white/70 leading-relaxed mb-4">
-                          Projet fintech conçu et développé en dehors des heures de travail, comme terrain d'expérimentation 
-                          et d'approfondissement technique.
+                          Système de paiement sans contact pour le transport urbain. Projet fintech innovant développé 
+                          en dehors des heures de travail, visant à moderniser les transactions dans les transports en commun.
                         </p>
                         <ul className="space-y-2 mb-4">
+                          <li className="flex items-start gap-2 text-xs text-white/60">
+                            <CheckCircle className="w-3 h-3 text-primary flex-shrink-0 mt-0.5" />
+                            <span>Paiement sans contact pour transport urbain</span>
+                          </li>
                           <li className="flex items-start gap-2 text-xs text-white/60">
                             <CheckCircle className="w-3 h-3 text-primary flex-shrink-0 mt-0.5" />
                             <span>Architecture microservices complète multi-langages</span>
@@ -461,7 +521,9 @@ export default function Home() {
                           </li>
                         </ul>
                         <div className="flex flex-wrap gap-2">
-                          <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-lg">Microservices</span>
+                          <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-lg">Fintech</span>
+                          <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-lg">Paiement NFC</span>
+                          <span className="px-2 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Microservices</span>
                           <span className="px-2 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Java</span>
                           <span className="px-2 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Python</span>
                           <span className="px-2 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
@@ -674,35 +736,37 @@ export default function Home() {
                       <Zap className="w-7 h-7 text-primary" />
                     </div>
                     <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-medium">
-                      Projet Personnel
+                      Projet Privé
                     </div>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-3">Ufaranga</h3>
-                  <p className="text-sm text-primary mb-4 font-medium">Solution Fintech Innovante</p>
+                  <p className="text-sm text-primary mb-4 font-medium">Paiement Sans Contact Transport Urbain</p>
                   
                   <p className="text-white/70 leading-relaxed mb-6 text-sm">
-                    Architecture microservices complète combinant Spring Boot (Java), Node.js et Django REST Framework (Python). 
-                    Système complet avec authentification, transactions, notifications et API Gateway.
+                    Système de paiement sans contact pour le transport urbain. Solution fintech innovante en pleine évolution, 
+                    combinant Spring Boot (Java), Node.js et Django REST Framework (Python) dans une architecture microservices complète.
                   </p>
 
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-2 text-xs text-white/60">
                       <CheckCircle className="w-4 h-4 text-primary" />
-                      <span>Architecture microservices</span>
+                      <span>Paiement NFC pour transports en commun</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs text-white/60">
                       <CheckCircle className="w-4 h-4 text-primary" />
-                      <span>Multi-langages (Java, Python, Node)</span>
+                      <span>Architecture microservices multi-langages</span>
                     </div>
                     <div className="flex items-center gap-2 text-xs text-white/60">
                       <CheckCircle className="w-4 h-4 text-primary" />
-                      <span>API Gateway & Auth</span>
+                      <span>API Gateway & système de transactions</span>
                     </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">Microservices</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">Fintech</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">NFC</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Microservices</span>
                     <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Java</span>
                     <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Python</span>
                     <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
