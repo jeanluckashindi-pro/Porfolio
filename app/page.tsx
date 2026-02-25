@@ -1,6 +1,7 @@
 import Header from "./components/Header";
-import { Briefcase, Code, FileText, Rocket, ExternalLink, Github, ArrowRight, CheckCircle, Users, Building, Award, BookOpen, Zap, Globe } from "lucide-react";
+import { Briefcase, Code, FileText, Rocket, ExternalLink, ArrowRight, CheckCircle, Building, Award, BookOpen, Zap, Globe, TrendingUp, BarChart3, Target, Github, Calendar } from "lucide-react";
 import Link from "next/link";
+import { ExperienceChart, TechStackChart, SkillsDonutChart, ProjectsTimelineChart } from "./components/SkillsChart";
 
 export default function Home() {
   return (
@@ -107,133 +108,585 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Current Position - Enhanced */}
+        {/* Current Position - Redesigned */}
         <section className="py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-card-2/50 to-transparent"></div>
-          <div className="max-w-7xl mx-auto px-8 relative">
-            <div className="flex items-center gap-3 mb-12">
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-primary" />
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm mb-4">
+                <Briefcase className="w-4 h-4" />
+                Poste actuel
               </div>
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white">Actuellement</h2>
-                <p className="text-white/60 text-sm">Mon poste actuel</p>
-              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Actuellement</h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                Mon rôle et mes responsabilités chez Mediabox Burundi
+              </p>
             </div>
             
-            <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 sm:p-12 hover:border-primary/30 transition-all">
-              <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-primary text-xs mb-4">
-                    <Building className="w-3 h-3" />
-                    Entreprise Leader
+            <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
+              <div className="p-8 sm:p-12">
+                <div className="flex flex-col lg:flex-row gap-8 items-start">
+                  {/* Left - Company Logo/Icon */}
+                  <div className="w-full lg:w-auto">
+                    <div className="w-24 h-24 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 lg:mb-0">
+                      <Building className="w-12 h-12 text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-bold text-white mb-3">Ingénieur Fullstack Senior</h3>
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-xl font-semibold text-primary">Mediabox Burundi</span>
-                    <span className="text-white/40">•</span>
-                    <span className="text-white/60">2022 - Présent</span>
+
+                  {/* Right - Content */}
+                  <div className="flex-1">
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-primary text-xs font-medium">
+                        <CheckCircle className="w-3 h-3" />
+                        Entreprise Leader
+                      </div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 rounded-full text-secondary text-xs font-medium">
+                        <Zap className="w-3 h-3" />
+                        Temps plein
+                      </div>
+                    </div>
+
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Ingénieur Fullstack Senior</h3>
+                    
+                    <div className="flex flex-wrap items-center gap-3 mb-6">
+                      <span className="text-xl font-semibold text-primary">Mediabox Burundi</span>
+                      <span className="text-white/40">•</span>
+                      <span className="text-white/60">2022 - Présent</span>
+                      <span className="text-white/40">•</span>
+                      <span className="text-white/60">3+ ans</span>
+                    </div>
+
+                    <p className="text-white/70 leading-relaxed mb-6 text-base sm:text-lg">
+                      Mediabox Burundi est le <span className="text-white font-medium">revendeur légal officiel Starlink</span> au Burundi. 
+                      En charge de la conception, du développement et du déploiement de solutions numériques stratégiques 
+                      pour des clients publics et privés.
+                    </p>
+
+                    {/* Responsibilities */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-white/70">Architecture de solutions complexes</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-white/70">Développement fullstack avancé</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-tertiary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-white/70">Gestion de projets gouvernementaux</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-white/70">Intégration API Starlink</span>
+                      </div>
+                    </div>
+
+                    {/* Tech Stack */}
+                    <div className="mb-6">
+                      <div className="text-sm text-white/50 mb-3">Stack technique principal</div>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-primary/10 text-primary text-sm rounded-lg border border-primary/20">Spring Boot</span>
+                        <span className="px-4 py-2 bg-secondary/10 text-secondary text-sm rounded-lg border border-secondary/20">React</span>
+                        <span className="px-4 py-2 bg-tertiary/10 text-tertiary text-sm rounded-lg border border-tertiary/20">Node.js</span>
+                        <span className="px-4 py-2 bg-white/5 text-white/60 text-sm rounded-lg border border-white/10">Angular</span>
+                        <span className="px-4 py-2 bg-white/5 text-white/60 text-sm rounded-lg border border-white/10">Microservices</span>
+                      </div>
+                    </div>
+
+                    <a 
+                      href="https://mediabox.bi" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
+                    >
+                      Visiter le site web
+                      <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    </a>
                   </div>
-                  <p className="text-white/70 leading-relaxed mb-8 text-lg">
-                    Mediabox Burundi est le <span className="text-white font-medium">revendeur légal officiel Starlink</span> au Burundi. 
-                    En charge de la conception, du développement et du déploiement de solutions numériques stratégiques 
-                    pour des clients publics et privés.
-                  </p>
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    <span className="px-4 py-2 bg-primary/10 text-primary text-sm rounded-lg border border-primary/20">Spring Boot</span>
-                    <span className="px-4 py-2 bg-secondary/10 text-secondary text-sm rounded-lg border border-secondary/20">React</span>
-                    <span className="px-4 py-2 bg-tertiary/10 text-tertiary text-sm rounded-lg border border-tertiary/20">Node.js</span>
-                    <span className="px-4 py-2 bg-white/5 text-white/60 text-sm rounded-lg border border-white/10">Microservices</span>
-                  </div>
-                  <a 
-                    href="https://mediabox.bi" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
-                  >
-                    Visiter le site web
-                    <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Projects - Enhanced Grid */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="flex items-center gap-3 mb-12">
-              <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
-                <Rocket className="w-6 h-6 text-secondary" />
+        {/* Professional Journey Section - NEW */}
+        <section className="py-24 relative bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm mb-4">
+                <Calendar className="w-4 h-4" />
+                Mon parcours
               </div>
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white">Projets en Développement</h2>
-                <p className="text-white/60 text-sm">Solutions innovantes en cours</p>
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Parcours Professionnel</h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                Une progression continue dans le développement de solutions numériques innovantes
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Timeline Column */}
+              <div className="lg:col-span-2">
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-8">
+                  <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-2">
+                    <Briefcase className="w-5 h-5 text-primary" />
+                    Expériences Professionnelles
+                  </h3>
+                  
+                  <div className="space-y-6">
+                    {/* Mediabox Burundi */}
+                    <div className="relative pl-8 pb-6 border-l-2 border-white/20 last:border-l-0 last:pb-0">
+                      <div className="absolute left-0 top-0 w-4 h-4 bg-white rounded-full -translate-x-[9px] ring-4 ring-card-2"></div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                        <div className="flex items-start justify-between mb-3">
+                          <div>
+                            <h4 className="text-lg font-bold text-white">Mediabox Burundi</h4>
+                            <p className="text-sm text-primary font-medium">Ingénieur Fullstack Senior</p>
+                          </div>
+                          <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">Actuel</span>
+                        </div>
+                        <p className="text-xs text-white/50 mb-4">2022 - Présent • 3+ ans</p>
+                        <p className="text-sm text-white/70 leading-relaxed mb-4">
+                          Entreprise privée burundaise, leader dans le développement de solutions numériques, impliquée dans des projets stratégiques gouvernementaux et privés à l'échelle nationale, et revendeur officiel des kits Starlink au Burundi.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Spring Boot</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">React</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Angular</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Freelance */}
+                    <div className="relative pl-8 pb-6 border-l-2 border-white/20 last:border-l-0 last:pb-0">
+                      <div className="absolute left-0 top-0 w-4 h-4 bg-white/70 rounded-full -translate-x-[9px] ring-4 ring-card-2"></div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                        <div className="flex items-start justify-between mb-3">
+                          <div>
+                            <h4 className="text-lg font-bold text-white">Freelance</h4>
+                            <p className="text-sm text-secondary font-medium">Développeur Fullstack</p>
+                          </div>
+                          <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full font-medium">Parallèle</span>
+                        </div>
+                        <p className="text-xs text-white/50 mb-4">2021 - Présent • 5+ ans</p>
+                        <p className="text-sm text-white/70 leading-relaxed mb-4">
+                          Développement de projets personnels et missions freelance. Création d'applications web et mobiles pour divers clients.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Full Stack</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Microservices</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Python</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Projets académiques */}
+                    <div className="relative pl-8">
+                      <div className="absolute left-0 top-0 w-4 h-4 bg-white/40 rounded-full -translate-x-[9px] ring-4 ring-card-2"></div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+                        <div className="flex items-start justify-between mb-3">
+                          <div>
+                            <h4 className="text-lg font-bold text-white">Projets Académiques</h4>
+                            <p className="text-sm text-tertiary font-medium">Étudiant en Geni Informatique</p>
+                          </div>
+                          <span className="px-3 py-1 bg-white/10 text-white/60 text-xs rounded-full font-medium">Terminé</span>
+                        </div>
+                        <p className="text-xs text-white/50 mb-4">2020 - 2022 • 2 ans</p>
+                        <p className="text-sm text-white/70 leading-relaxed mb-4">
+                          Formation universitaire en génie logiciel. Développement de projets académiques et participation à des hackathons.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Java</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Web Dev</span>
+                          <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Databases</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Profile & Achievements Column */}
+              <div className="space-y-6">
+                {/* Profile Card */}
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <Award className="w-5 h-5 text-tertiary" />
+                    Profil
+                  </h3>
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-xs text-white/50 mb-1">Nom complet</div>
+                      <div className="text-sm text-white font-medium">Jean-Luc Kashindi Nestor</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-white/50 mb-1">Âge</div>
+                      <div className="text-sm text-white font-medium">25 ans</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-white/50 mb-1">Localisation</div>
+                      <div className="text-sm text-white font-medium">Gihosha, Bujumbura, Burundi</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-white/50 mb-1">Email</div>
+                      <div className="text-sm text-white font-medium break-all">Jeanluckashindi812@gmail.com</div>
+                    </div>
+                    <div>
+                      <div className="text-xs text-white/50 mb-1">Téléphone</div>
+                      <div className="text-sm text-white font-medium">+257 64 39 72 62</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Achievements */}
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-primary" />
+                    Points Forts
+                  </h3>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-white">Architecture Microservices</div>
+                        <div className="text-xs text-white/60">Expert en systèmes distribués</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-white">Projets Gouvernementaux</div>
+                        <div className="text-xs text-white/60">Solutions à échelle nationale</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-tertiary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-white">Leadership Technique</div>
+                        <div className="text-xs text-white/60">Mentorat et formation d'équipes</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-white">Innovation Continue</div>
+                        <div className="text-xs text-white/60">Veille technologique active</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Social Links */}
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <Globe className="w-5 h-5 text-secondary" />
+                    Réseaux
+                  </h3>
+                  <div className="space-y-3">
+                    <a href="https://github.com/jeanluckashindi-pro" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-lg transition-colors group">
+                      <Github className="w-5 h-5 text-white/60 group-hover:text-white" />
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-white">GitHub</div>
+                        <div className="text-xs text-white/50">@jeanluckashindi-pro</div>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-white/40 group-hover:text-white" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Projects - Redesigned */}
+        <section className="py-24 bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm mb-4">
+                <Rocket className="w-4 h-4" />
+                En développement
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Projets en Cours</h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                Solutions innovantes que je développe actuellement pour transformer le paysage numérique
+              </p>
+            </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* ODECA */}
-              <div className="group bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all hover:-translate-y-2">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Code className="w-7 h-7 text-primary" />
-                </div>
-                <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-4">
-                  Gouvernemental
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">ODECA</h3>
-                <p className="text-white/70 leading-relaxed mb-6">
-                  Système national de gestion de la filière café. Cartographie géospatiale et numérisation complète 
-                  de la chaîne de valeur caféière au Burundi.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Spring Boot</span>
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Angular</span>
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">React</span>
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all hover:-translate-y-2">
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Code className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium">
+                      Gouvernemental
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">ODECA</h3>
+                  <p className="text-sm text-primary/80 mb-4 font-medium">Système National de Gestion du Café</p>
+                  
+                  <p className="text-white/70 leading-relaxed mb-6 text-sm">
+                    Plateforme complète de cartographie géospatiale et numérisation de la chaîne de valeur caféière au Burundi. 
+                    Utilisée par les institutions gouvernementales pour le suivi et la gestion de la filière.
+                  </p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>Cartographie géospatiale</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>Gestion de la chaîne de valeur</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>Échelle nationale</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Spring Boot</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Angular</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">React</span>
+                  </div>
                 </div>
               </div>
 
               {/* ISP Starlink */}
-              <div className="group bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all hover:-translate-y-2">
-                <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Code className="w-7 h-7 text-secondary" />
-                </div>
-                <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full mb-4">
-                  Commercial
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">ISP Starlink</h3>
-                <p className="text-white/70 leading-relaxed mb-6">
-                  Intégration complète des API Starlink. Tableau de bord temps réel pour le suivi des métriques, 
-                  performance réseau et facturation clients.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Spring Boot</span>
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">React</span>
-                  <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-secondary/30 transition-all hover:-translate-y-2">
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Globe className="w-7 h-7 text-secondary" />
+                    </div>
+                    <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full font-medium">
+                      Commercial
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">ISP Starlink</h3>
+                  <p className="text-sm text-secondary/80 mb-4 font-medium">Intégration API Starlink</p>
+                  
+                  <p className="text-white/70 leading-relaxed mb-6 text-sm">
+                    Tableau de bord temps réel pour le suivi des métriques réseau, performance et facturation clients. 
+                    Intégration complète avec les API Starlink pour une gestion optimale.
+                  </p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-secondary" />
+                      <span>Monitoring temps réel</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-secondary" />
+                      <span>Gestion de facturation</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-secondary" />
+                      <span>Analytics avancés</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Spring Boot</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">React</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
+                  </div>
                 </div>
               </div>
 
               {/* Ufarnaga - Featured */}
-              <div className="group bg-gradient-to-br from-primary/10 via-card-2 to-card-2 border border-primary/30 rounded-2xl p-8 hover:border-primary/50 transition-all hover:-translate-y-2 relative overflow-hidden">
+              <div className="group bg-gradient-to-br from-primary/10 via-card-2 to-card-2 border border-primary/30 rounded-2xl overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-2 relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-                <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary/40 to-primary/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Code className="w-7 h-7 text-primary" />
+                <div className="p-8 relative">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary/40 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <Zap className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full font-medium">
+                      Projet Personnel
+                    </div>
                   </div>
-                  <div className="inline-block px-3 py-1 bg-primary/20 text-primary text-xs rounded-full mb-4 font-medium">
-                    Projet Personnel
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">Ufarnaga</h3>
-                  <p className="text-sm text-primary mb-3 font-medium">Solution Fintech Innovante</p>
-                  <p className="text-white/70 leading-relaxed mb-6">
-                    Architecture microservices complète. Spring Boot (Java), Node.js et Django REST Framework (Python). 
-                    Authentification, transactions, notifications et API Gateway.
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3">Ufaranga</h3>
+                  <p className="text-sm text-primary mb-4 font-medium">Solution Fintech Innovante</p>
+                  
+                  <p className="text-white/70 leading-relaxed mb-6 text-sm">
+                    Architecture microservices complète combinant Spring Boot (Java), Node.js et Django REST Framework (Python). 
+                    Système complet avec authentification, transactions, notifications et API Gateway.
                   </p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>Architecture microservices</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>Multi-langages (Java, Python, Node)</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-white/60">
+                      <CheckCircle className="w-4 h-4 text-primary" />
+                      <span>API Gateway & Auth</span>
+                    </div>
+                  </div>
+                  
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">Microservices</span>
                     <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Java</span>
                     <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Python</span>
+                    <span className="px-3 py-1 bg-white/5 text-white/60 text-xs rounded-lg">Node.js</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Evolution & Statistics Section - NEW */}
+        <section className="py-24 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-card-2/30 via-transparent to-card-2/30"></div>
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-full text-tertiary text-sm mb-4">
+                <TrendingUp className="w-4 h-4" />
+                Évolution & Croissance
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Mon Parcours en Chiffres</h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                Une progression constante dans le développement de compétences et la réalisation de projets
+              </p>
+            </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-gradient-to-br from-primary/10 to-card-2 border border-primary/20 rounded-2xl p-6 hover:border-primary/40 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
+                    <Target className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-primary">15+</div>
+                    <div className="text-xs text-white/60">Total</div>
+                  </div>
+                </div>
+                <div className="text-sm font-medium text-white mb-1">Projets Complétés</div>
+                <div className="text-xs text-white/50">Depuis 2022</div>
+              </div>
+
+              <div className="bg-gradient-to-br from-secondary/10 to-card-2 border border-secondary/20 rounded-2xl p-6 hover:border-secondary/40 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
+                    <Code className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-secondary">12+</div>
+                    <div className="text-xs text-white/60">Maîtrisées</div>
+                  </div>
+                </div>
+                <div className="text-sm font-medium text-white mb-1">Technologies</div>
+                <div className="text-xs text-white/50">En constante évolution</div>
+              </div>
+
+              <div className="bg-gradient-to-br from-tertiary/10 to-card-2 border border-tertiary/20 rounded-2xl p-6 hover:border-tertiary/40 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center">
+                    <Award className="w-6 h-6 text-tertiary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-tertiary">100%</div>
+                    <div className="text-xs text-white/60">Taux</div>
+                  </div>
+                </div>
+                <div className="text-sm font-medium text-white mb-1">Satisfaction Client</div>
+                <div className="text-xs text-white/50">Projets livrés avec succès</div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-card-2 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-white/60" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-3xl font-bold text-white">3+</div>
+                    <div className="text-xs text-white/60">Années</div>
+                  </div>
+                </div>
+                <div className="text-sm font-medium text-white mb-1">Expérience Continue</div>
+                <div className="text-xs text-white/50">Chez Mediabox Burundi</div>
+              </div>
+            </div>
+
+            {/* Charts Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Experience Evolution Chart */}
+              <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Évolution de l'Expérience</h3>
+                    <p className="text-sm text-white/60">Croissance au fil des années</p>
+                  </div>
+                </div>
+                <div className="h-[300px]">
+                  <ExperienceChart />
+                </div>
+              </div>
+
+              {/* Skills Donut Chart */}
+              <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
+                    <Target className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Répartition des Compétences</h3>
+                    <p className="text-sm text-white/60">Distribution par domaine d'expertise</p>
+                  </div>
+                </div>
+                <div className="h-[300px]">
+                  <SkillsDonutChart />
+                </div>
+              </div>
+
+              {/* Tech Stack Proficiency & Projects Timeline */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:col-span-2">
+                {/* Tech Stack */}
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-tertiary/30 transition-all">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
+                      <BarChart3 className="w-5 h-5 text-tertiary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Maîtrise des Technologies</h3>
+                      <p className="text-sm text-white/60">Niveau d'expertise par technologie</p>
+                    </div>
+                  </div>
+                  <div className="h-[350px]">
+                    <TechStackChart />
+                  </div>
+                </div>
+
+                {/* Activity Chart */}
+                <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Activité de Développement</h3>
+                      <p className="text-sm text-white/60">Contributions mensuelles 2026</p>
+                    </div>
+                  </div>
+                  <div className="h-[350px]">
+                    <ProjectsTimelineChart />
                   </div>
                 </div>
               </div>
@@ -399,6 +852,170 @@ export default function Home() {
                 Voir toutes les publications
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section - NEW */}
+        <section className="py-24 relative bg-gradient-to-b from-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm mb-4">
+                <Code className="w-4 h-4" />
+                Services proposés
+              </div>
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Ce que je peux faire pour vous</h2>
+              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+                Des solutions complètes pour vos besoins en développement et architecture logicielle
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Code className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Développement Fullstack</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Création d'applications web complètes avec Spring Boot, React, Node.js et Angular. 
+                  De la conception à la mise en production.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Applications web modernes</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>APIs REST & GraphQL</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Interfaces utilisateur réactives</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Building className="w-7 h-7 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Architecture Microservices</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Conception et implémentation d'architectures distribuées scalables et résilientes 
+                  pour des systèmes complexes.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>Design patterns avancés</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>API Gateway & Service Mesh</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>Event-driven architecture</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-tertiary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-tertiary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Rocket className="w-7 h-7 text-tertiary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">DevOps & Cloud</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Automatisation des déploiements, CI/CD, containerisation et gestion d'infrastructure cloud.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>Docker & Kubernetes</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>CI/CD pipelines</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>Monitoring & Logging</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Target className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Conseil Technique</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Accompagnement stratégique pour vos choix technologiques et l'optimisation de vos systèmes existants.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Audit de code & architecture</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Choix technologiques</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Optimisation performance</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Globe className="w-7 h-7 text-secondary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Intégrations API</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Connexion de vos systèmes avec des services tiers, APIs externes et plateformes cloud.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>APIs RESTful & GraphQL</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>Webhooks & Events</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-secondary" />
+                    <span>Services tiers (Starlink, etc.)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-tertiary/30 transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 bg-tertiary/20 rounded-xl flex items-center justify-center mb-6">
+                  <Award className="w-7 h-7 text-tertiary" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Formation & Mentorat</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                  Accompagnement d'équipes techniques et formation sur les technologies modernes et best practices.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>Formation équipes</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>Code reviews</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-xs text-white/60">
+                    <CheckCircle className="w-4 h-4 text-tertiary" />
+                    <span>Best practices</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
