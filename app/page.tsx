@@ -16,8 +16,8 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
               {/* Left Column - Main Info */}
               <div className="flex-1 w-full">
-                
-                <p className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary mb-6 font-semibold">
+                {/* Subtitle with gradient */}
+                <p className="text-xl sm:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary font-semibold mb-8">
                   Ingénieur Fullstack Senior
                 </p>
 
@@ -27,19 +27,46 @@ export default function Home() {
                   de systèmes utilisés à l'échelle nationale par des institutions gouvernementales et organisations internationales.
                 </p>
 
-                {/* Quick Info */}
-                <div className="flex flex-wrap gap-4 sm:gap-6 mb-8 text-sm text-white/60">
-                  <div className="flex items-center gap-2">
-                    <Building className="w-4 h-4 text-primary" />
-                    <span>Mediabox Burundi</span>
+                {/* Key Highlights */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-primary/30 transition-colors">
+                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Building className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white mb-1">Mediabox Burundi</div>
+                      <div className="text-xs text-white/60">Revendeur officiel Starlink</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Globe className="w-4 h-4 text-secondary" />
-                    <span>Bujumbura, Burundi</span>
+
+                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-secondary/30 transition-colors">
+                    <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Briefcase className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white mb-1">3+ ans d'expérience</div>
+                      <div className="text-xs text-white/60">Développement continu</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-tertiary" />
-                    <span>25 ans</span>
+
+                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-tertiary/30 transition-colors">
+                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5 text-tertiary" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white mb-1">Bujumbura, Burundi</div>
+                      <div className="text-xs text-white/60">Basé en Afrique de l'Est</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-card-2/50 border border-white/10 rounded-lg hover:border-white/20 transition-colors">
+                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Rocket className="w-5 h-5 text-white/60" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white mb-1">Solutions à impact</div>
+                      <div className="text-xs text-white/60">Projets gouvernementaux</div>
+                    </div>
                   </div>
                 </div>
 
