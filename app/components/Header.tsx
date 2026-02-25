@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -26,18 +26,34 @@ import {
   FileDown,
   Palette,
   Link2,
-  Globe
+  Globe,
+  Settings
 } from 'lucide-react';
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState<string | null>(null);
+  const [loadingButton, setLoadingButton] = useState<string | null>(null);
   const pathname = usePathname();
+
+  // Sauvegarder le menu actif dans localStorage
+  useEffect(() => {
+    if (pathname) {
+      localStorage.setItem('activeMenuPath', pathname);
+      setLoadingButton(null); // Arrêter le spinner une fois la page chargée
+    }
+  }, [pathname]);
 
   const isActive = (href?: string) => {
     if (!href) return false;
     return pathname === href;
+  };
+
+  const handleMenuClick = (href: string) => {
+    localStorage.setItem('activeMenuPath', href);
+    setLoadingButton(href); // Activer le spinner pour ce bouton
+    setMobileMenuOpen(false);
   };
 
   const menuItems = [
@@ -138,15 +154,41 @@ export default function Header() {
                   </button>
                 ) : (
                   <Link 
-                    href={item.href!} 
+                    href={item.href!}
+                    onClick={() => handleMenuClick(item.href!)}
                     className={`flex items-center gap-2 text-sm transition-colors py-2 px-3 rounded-md border cursor-pointer ${
                       isActive(item.href)
                         ? 'text-white border-white/20 bg-white/10'
                         : 'text-white/70 hover:text-white border-transparent hover:border-white/10 hover:bg-white/5'
                     }`}
                   >
-                    <item.icon className="w-4 h-4" />
-                    <span>{item.title}</span>
+                    {loadingButton === item.href ? (
+                      <div className="flex items-center gap-2">
+                        <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
+                          {[...Array(8)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="spinner-spoke"
+                              style={{
+                                width: '1.5px',
+                                height: '6px',
+                                marginLeft: '-0.75px',
+                                borderRadius: '0.75px',
+                                background: 'currentColor',
+                                transform: `rotate(${i * 45}deg)`,
+                                transformOrigin: '0.75px 8px',
+                                animationDelay: `${-(i / 8)}s`,
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <item.icon className="w-4 h-4" />
+                        <span>{item.title}</span>
+                      </>
+                    )}
                   </Link>
                 )}
 
@@ -171,11 +213,35 @@ export default function Header() {
                             <Link
                               key={subItem.title}
                               href={subItem.href}
+                              onClick={() => handleMenuClick(subItem.href)}
                               className="flex items-start gap-3.5 px-3 py-3 rounded-md text-white/60 hover:text-white hover:bg-white/5 transition-all group"
                             >
-                              <div className="mt-0.5 p-2 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
-                                <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                              </div>
+                              {loadingButton === subItem.href ? (
+                                <div className="mt-0.5 p-2 rounded-md bg-white/5">
+                                  <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
+                                    {[...Array(8)].map((_, i) => (
+                                      <div
+                                        key={i}
+                                        className="spinner-spoke"
+                                        style={{
+                                          width: '1.5px',
+                                          height: '6px',
+                                          marginLeft: '-0.75px',
+                                          borderRadius: '0.75px',
+                                          background: 'currentColor',
+                                          transform: `rotate(${i * 45}deg)`,
+                                          transformOrigin: '0.75px 8px',
+                                          animationDelay: `${-(i / 8)}s`,
+                                        }}
+                                      />
+                                    ))}
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="mt-0.5 p-2 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
+                                  <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                                </div>
+                              )}
                               <div className="flex-1 min-w-0">
                                 <div className="text-sm font-medium mb-0.5">{subItem.title}</div>
                                 <div className="text-xs text-white/40 leading-relaxed">{subItem.description}</div>
@@ -193,11 +259,11 @@ export default function Header() {
 
           {/* CTA */}
           <Link
-            href="/contact"
+            href="/backoffice"
             className="hidden lg:flex items-center gap-2 bg-white text-black px-5 py-1.5 text-sm rounded-sm hover:bg-white/90 transition-colors"
           >
-            <Mail className="w-4 h-4" />
-            <span>Contact</span>
+            <Settings className="w-4 h-4" />
+            <span>Backoffice</span>
           </Link>
 
           {/* Mobile Menu Button */}
@@ -279,12 +345,35 @@ export default function Header() {
                               <Link
                                 key={subItem.title}
                                 href={subItem.href}
-                                onClick={() => setMobileMenuOpen(false)}
+                                onClick={() => handleMenuClick(subItem.href)}
                                 className="flex items-start gap-3 py-3 text-white/60 hover:text-white transition-colors group"
                               >
-                                <div className="mt-0.5 p-1.5 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
-                                  <Icon className="w-4 h-4" />
-                                </div>
+                                {loadingButton === subItem.href ? (
+                                  <div className="mt-0.5 p-1.5 rounded-md bg-white/5">
+                                    <div className="spinner-container" style={{ width: '16px', height: '16px' }}>
+                                      {[...Array(8)].map((_, i) => (
+                                        <div
+                                          key={i}
+                                          className="spinner-spoke"
+                                          style={{
+                                            width: '1.5px',
+                                            height: '6px',
+                                            marginLeft: '-0.75px',
+                                            borderRadius: '0.75px',
+                                            background: 'currentColor',
+                                            transform: `rotate(${i * 45}deg)`,
+                                            transformOrigin: '0.75px 8px',
+                                            animationDelay: `${-(i / 8)}s`,
+                                          }}
+                                        />
+                                      ))}
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="mt-0.5 p-1.5 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
+                                    <Icon className="w-4 h-4" />
+                                  </div>
+                                )}
                                 <div className="flex-1">
                                   <div className="text-sm font-medium mb-0.5">{subItem.title}</div>
                                   <div className="text-xs text-white/40">{subItem.description}</div>
@@ -298,13 +387,36 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href!}
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={() => handleMenuClick(item.href!)}
                       className={`flex items-center gap-3 py-3 transition-colors ${
                         isActive(item.href) ? 'text-white' : 'text-white/70 hover:text-white'
                       }`}
                     >
-                      <item.icon className="w-5 h-5" />
-                      <span className="font-medium">{item.title}</span>
+                      {loadingButton === item.href ? (
+                        <div className="spinner-container" style={{ width: '20px', height: '20px' }}>
+                          {[...Array(8)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="spinner-spoke"
+                              style={{
+                                width: '2px',
+                                height: '8px',
+                                marginLeft: '-1px',
+                                borderRadius: '1px',
+                                background: 'currentColor',
+                                transform: `rotate(${i * 45}deg)`,
+                                transformOrigin: '1px 10px',
+                                animationDelay: `${-(i / 8)}s`,
+                              }}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <>
+                          <item.icon className="w-5 h-5" />
+                          <span className="font-medium">{item.title}</span>
+                        </>
+                      )}
                     </Link>
                   )}
                 </div>
@@ -312,12 +424,12 @@ export default function Header() {
               
               {/* CTA Mobile */}
               <Link
-                href="/contact"
+                href="/backoffice"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-center gap-2 mt-6 bg-white text-black px-6 py-3 text-sm font-medium rounded-lg hover:bg-white/90 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>Me contacter</span>
+                <span>Backoffice</span>
               </Link>
             </div>
           </div>
