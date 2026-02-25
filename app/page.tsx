@@ -170,10 +170,10 @@ export default function Home() {
               </Link>
               <Link 
                 href="/cv" 
-                className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white px-4 sm:px-6 py-3 sm:py-4 transition-colors text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 bg-primary/20 text-primary border border-primary/40 px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-primary/30 hover:border-primary/60 transition-all text-sm sm:text-base"
               >
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
-                Télécharger CV
+                Visualiser mon CV
               </Link>
             </div>
           </div>

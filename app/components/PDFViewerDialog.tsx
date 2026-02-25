@@ -32,7 +32,7 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
     <Dialog
       header="Curriculum Vitae - Jean-Luc Kashindi Nestor"
       visible={visible}
-      style={{ width: '90vw', height: '90vh' }}
+      style={{ width: '60vw', height: '100vh' }}
       onHide={onHide}
       maximizable
       modal
