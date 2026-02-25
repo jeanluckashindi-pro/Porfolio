@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header />
       <main className="pt-16 min-h-screen bg-card-1">
-        {/* Hero Section - Redesigned */}
+        {/* Hero Section - Fully Responsive */}
         <section className="relative overflow-hidden bg-gradient-to-b from-card-2 via-card-1 to-card-1">
           {/* Animated Background */}
           <div className="absolute inset-0">
@@ -17,89 +17,94 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 py-16 sm:py-24 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative">
             {/* Status Badge */}
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/30 rounded-full">
-                <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                <span className="text-secondary text-sm font-medium">Disponible pour de nouveaux projets</span>
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 bg-card-2 border border-secondary/40 rounded-[5px]">
+                <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                <span className="text-secondary text-xs sm:text-sm font-semibold">Disponible pour de nouveaux projets</span>
               </div>
             </div>
 
             {/* Main Content */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <div className="text-center mb-8 sm:mb-12">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
                 Jean-Luc Kashindi Nestor
               </h1>
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6">
+              <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-4 sm:mb-6 px-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
                   Ingénieur Fullstack Senior
                 </span>
               </p>
-              <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
+              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
                 Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>. 
                 Spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
                 par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
               </p>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
-              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-primary/50">
+            {/* Stats Grid - Responsive */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12 px-2">
+              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-primary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-6 h-6 text-primary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">3+</div>
-                  <div className="text-sm text-white/70 font-medium">Ans d'expérience</div>
-                  <div className="text-xs text-white/50 mt-1">Développement continu</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">3+</div>
+                  <div className="text-xs sm:text-sm text-white/70 font-medium">Ans d'expérience</div>
+                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Développement continu</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-secondary/50">
+              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-secondary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                    <Rocket className="w-6 h-6 text-secondary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
                   </div>
-                  <div className="text-4xl sm:text-5xl font-bold text-secondary mb-2">15+</div>
-                  <div className="text-sm text-white/70 font-medium">Projets livrés</div>
-                  <div className="text-xs text-white/50 mt-1">Solutions déployées</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-1 sm:mb-2">15+</div>
+                  <div className="text-xs sm:text-sm text-white/70 font-medium">Projets livrés</div>
+                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Solutions déployées</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-2xl p-6 hover:scale-105 transition-all hover:border-tertiary/50">
+              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-tertiary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                    <Code className="w-6 h-6 text-tertiary" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Code className="w-5 h-5 sm:w-6 sm:h-6 text-tertiary" />
                   </div>
-                  <div className="text-4xl sm:text-5xl font-bold text-tertiary mb-2">12+</div>
-                  <div className="text-sm text-white/70 font-medium">Technologies</div>
-                  <div className="text-xs text-white/50 mt-1">Stack moderne</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-1 sm:mb-2">12+</div>
+                  <div className="text-xs sm:text-sm text-white/70 font-medium">Technologies</div>
+                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Stack moderne</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-2xl p-6 hover:scale-105 transition-all hover:border-white/30">
+              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-white/30">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                    <Award className="w-6 h-6 text-white/80" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white/80" />
                   </div>
-                  <div className="text-4xl sm:text-5xl font-bold text-white mb-2">100%</div>
-                  <div className="text-sm text-white/70 font-medium">Satisfaction</div>
-                  <div className="text-xs text-white/50 mt-1">Clients satisfaits</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">100%</div>
+                  <div className="text-xs sm:text-sm text-white/70 font-medium">Satisfaction</div>
+                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Clients satisfaits</div>
                 </div>
               </div>
             </div>
 
-            {/* Highlight Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto mb-12">
-              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-primary/30 transition-all hover:bg-card-2">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <Building className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-white">Mediabox Burundi</div>
-                    <div className="text-xs text-primary">Poste actuel</div>
+            {/* Highlight Cards - Responsive */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12 px-2">
+              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-primary/40 transition-all">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Building className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-bold text-white truncate">Mediabox Burundi</div>
+                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-primary/40 rounded-[5px]">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <span className="text-xs text-primary font-semibold">Poste actuel</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <p className="text-xs text-white/60 leading-relaxed">
@@ -107,14 +112,19 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-secondary/30 transition-all hover:bg-card-2">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
-                    <Globe className="w-5 h-5 text-secondary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-white">Projets Gouvernementaux</div>
-                    <div className="text-xs text-secondary">Échelle nationale</div>
+              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-secondary/40 transition-all">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5 text-secondary" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-bold text-white truncate">Projets Gouvernementaux</div>
+                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-secondary/40 rounded-[5px]">
+                        <Award className="w-3 h-3 text-secondary" />
+                        <span className="text-xs text-secondary font-semibold">Échelle nationale</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <p className="text-xs text-white/60 leading-relaxed">
@@ -122,14 +132,19 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-card-2/80 backdrop-blur-sm border border-white/10 rounded-xl p-5 hover:border-tertiary/30 transition-all hover:bg-card-2">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-tertiary" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold text-white">Architecture Microservices</div>
-                    <div className="text-xs text-tertiary">Expert technique</div>
+              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-tertiary/40 transition-all sm:col-span-2 lg:col-span-1">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-5 h-5 text-tertiary" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-sm font-bold text-white truncate">Architecture Microservices</div>
+                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-tertiary/40 rounded-[5px]">
+                        <Code className="w-3 h-3 text-tertiary" />
+                        <span className="text-xs text-tertiary font-semibold">Expert technique</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <p className="text-xs text-white/60 leading-relaxed">
@@ -138,26 +153,26 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* CTAs - Responsive */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 sm:px-2">
               <Link 
                 href="/contact" 
-                className="group inline-flex items-center justify-center gap-2 bg-white text-black px-10 py-4 rounded-xl font-semibold hover:bg-white/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center justify-center gap-2 bg-white text-black px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-white/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 Démarrer un projet
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 href="/projets/professionnels" 
-                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-10 py-4 rounded-xl font-semibold border border-white/20 hover:bg-white/5 hover:border-white/30 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold border border-white/20 hover:bg-white/5 hover:border-white/30 transition-all text-sm sm:text-base"
               >
                 Voir mes réalisations
               </Link>
               <Link 
                 href="/cv" 
-                className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white px-6 py-4 transition-colors"
+                className="inline-flex items-center justify-center gap-2 text-white/80 hover:text-white px-4 sm:px-6 py-3 sm:py-4 transition-colors text-sm sm:text-base"
               >
-                <FileText className="w-5 h-5" />
+                <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                 Télécharger CV
               </Link>
             </div>
