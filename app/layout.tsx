@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Open_Sans, Anton, Antonio, Kaushan_Script, Ubuntu } from "next/font/google";
 import "./globals.css";
+import "primereact/resources/themes/lara-dark-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import SpineSpokeAnimation from "./components/SpineSpokeAnimation";
 import LoadingBar from "./components/LoadingBar";
 
