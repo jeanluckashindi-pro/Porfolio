@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+import { createRoot } from 'react-dom/client';
 
 export default function SpineSpokeAnimation() {
   useEffect(() => {
@@ -16,40 +18,26 @@ export default function SpineSpokeAnimation() {
       const y = e.clientY - rect.top;
 
       // Créer le conteneur d'animation
-      const spokeContainer = document.createElement('div');
-      spokeContainer.className = 'spine-spoke-container';
-      spokeContainer.style.cssText = `
+      const spinnerContainer = document.createElement('div');
+      spinnerContainer.style.cssText = `
         position: absolute;
         left: ${x}px;
         top: ${y}px;
+        transform: translate(-50%, -50%);
         pointer-events: none;
         z-index: 9999;
       `;
 
-      // Créer 12 rayons
-      const spokeCount = 12;
-      for (let i = 0; i < spokeCount; i++) {
-        const spoke = document.createElement('div');
-        spoke.className = 'spine-spoke';
-        const angle = (360 / spokeCount) * i;
-        spoke.style.cssText = `
-          position: absolute;
-          width: 3px;
-          height: 40px;
-          background: linear-gradient(to bottom, var(--color-primary), transparent);
-          transform-origin: top center;
-          transform: rotate(${angle}deg);
-          animation: spokeExpand 0.6s ease-out forwards;
-        `;
-        spokeContainer.appendChild(spoke);
-      }
-
-      button.appendChild(spokeContainer);
+      // Ajouter le spinner React
+      button.appendChild(spinnerContainer);
+      const root = createRoot(spinnerContainer);
+      root.render(<LoadingSpinner size="xs" color="black" />);
 
       // Nettoyer après l'animation
       setTimeout(() => {
-        spokeContainer.remove();
-      }, 600);
+        root.unmount();
+        spinnerContainer.remove();
+      }, 800);
     };
 
     document.addEventListener('click', handleClick);

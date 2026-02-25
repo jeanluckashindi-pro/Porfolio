@@ -45,6 +45,7 @@ export default function LoadingSpinner({
               marginLeft: `-${config.spoke.width / 2}px`,
               borderRadius: `${config.spoke.radius}px`,
               background: color,
+              backgroundColor: color,
               transform: `rotate(${angle}deg)`,
               transformOrigin: `${config.spoke.width / 2}px ${config.container / 2}px`,
               animationDelay: `${delay}s`,

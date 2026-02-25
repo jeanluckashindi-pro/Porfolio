@@ -48,17 +48,6 @@ button, a[href] {
   overflow: hidden;
 }
 
-@keyframes spokeExpand {
-  0% {
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    height: 80px;
-    opacity: 0;
-  }
-}
-
 /* Spinner Spoke CSS Animation */
 .spinner-container {
   position: relative;
