@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   // Stack technique
   techStack: {
     fontSize: 7,
-    marginTop: 2,
+    margin: 2 ,
   },
   
   // Référence
@@ -259,16 +259,16 @@ export function CVDocument() {
                 <Text style={styles.subSectionTitle}>Projet ODECA — Plateforme nationale de numérisation de la filière café</Text>
                 <Text style={styles.subSectionSubtitle}>Commande directe du gouvernement burundais</Text>
                 <Text style={styles.bulletPoint}>
-                  1 Modélisation et numérisation du parcours complet des caféiculteurs
+                  1. Modélisation et numérisation du parcours complet des caféiculteurs
                 </Text>
                 <Text style={styles.bulletPoint}>
-                  2 Développement d'un module de cartographie géospatiale pour localiser les producteurs
+                  2. Développement d'un module de cartographie géospatiale pour localiser les producteurs
                 </Text>
                 <Text style={styles.bulletPoint}>
-                  3 Création de profils individuels par caféiculteur avec remontée automatique de données
+                  3. Création de profils individuels par caféiculteur avec remontée automatique de données
                 </Text>
                 <Text style={styles.bulletPoint}>
-                  4 Mise en place d'outils de contrôle, d'audit et de reporting pour les superviseurs d'État
+                  4. Mise en place d'outils de contrôle, d'audit et de reporting pour les superviseurs d'État
                 </Text>
                 <Text style={styles.techStack}>Stack : Spring Boot · Angular · React · Bases de données relationnelles</Text>
               </View>
@@ -276,13 +276,13 @@ export function CVDocument() {
               <View style={styles.subSection}>
                 <Text style={styles.subSectionTitle}>Projet ISP Starlink — Système de gestion et de revente de la connectivité</Text>
                 <Text style={styles.bulletPoint}>
-                  1 Intégration complète des API officielles Starlink dans le système d'information
+                  1. Intégration complète des API officielles Starlink dans le système d'information
                 </Text>
                 <Text style={styles.bulletPoint}>
-                  2 Développement d'un tableau de bord temps réel : métriques, performance, facturation
+                  2. Développement d'un tableau de bord temps réel : métriques, performance, facturation
                 </Text>
                 <Text style={styles.bulletPoint}>
-                  3 Architecture microservices pour garantir la scalabilité et la haute disponibilité
+                  3. Architecture microservices pour garantir la scalabilité et la haute disponibilité
                 </Text>
                 <Text style={styles.techStack}>Stack : Spring Boot · React · Node.js · API Starlink</Text>
               </View>
@@ -298,13 +298,13 @@ export function CVDocument() {
                 Mission au sein de l'une des plus grandes organisations humanitaires mondiales. Environnement multilingue, multiculturel, soumis aux standards rigoureux des Nations Unies.
               </Text>
               <Text style={styles.bulletPoint}>
-                1 Conception, développement et support de solutions numériques aux standards onusiens
+                1. Conception, développement et support de solutions numériques aux standards onusiens
               </Text>
               <Text style={styles.bulletPoint}>
-                2 Collaboration avec des équipes internationales sur des outils à impact humanitaire direct
+                2. Collaboration avec des équipes internationales sur des outils à impact humanitaire direct
               </Text>
               <Text style={styles.bulletPoint}>
-                3 Gestion de systèmes d'information dans un contexte opérationnel à haute criticité
+                3. Gestion de systèmes d'information dans un contexte opérationnel à haute criticité
               </Text>
             </View>
           </View>
@@ -316,17 +316,16 @@ export function CVDocument() {
         <View style={styles.contentPage2}>
           {/* Suite Expérience */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>EXPÉRIENCE PROFESSIONNELLE (SUITE)</Text>
             
             {/* HOGI */}
             <View style={styles.experienceItem}>
               <Text style={styles.companyHeader}>HOGI · Ingénieur Backend</Text>
               <Text style={styles.jobDetails}>Bujumbura · CDD</Text>
               <Text style={styles.bulletPoint}>
-                1 Développement de modules backend pour les solutions numériques de HOGI
+                1. Développement de modules backend pour les solutions numériques de HOGI
               </Text>
               <Text style={styles.bulletPoint}>
-                2 Amélioration des performances et de la stabilité des systèmes existants
+                2. Amélioration des performances et de la stabilité des systèmes existants
               </Text>
               <Text style={styles.techStack}>Stack : Spring Boot · Node.js · Django REST Framework</Text>
             </View>
@@ -336,17 +335,17 @@ export function CVDocument() {
               <Text style={styles.companyHeader}>AFRISURGE · Ingénieur Logiciel Remote</Text>
               <Text style={styles.jobDetails}>RDC · Remote · CDD</Text>
               <Text style={styles.bulletPoint}>
-                1 Contribution full remote à un projet logiciel d'envergure régionale
+                1. Contribution full remote à un projet logiciel d'envergure régionale
               </Text>
               <Text style={styles.bulletPoint}>
-                2 Développement de fonctionnalités backend dans un environnement distribué et autonome
+                2. Développement de fonctionnalités backend dans un environnement distribué et autonome
               </Text>
             </View>
           </View>
           
           {/* Projet Personnel Ufaranga */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>PROJET PERSONNEL — UFARANGA</Text>
+            <Text style={styles.sectionTitle}>Projet Personnel Ufaranga</Text>
             <Text style={styles.subSectionTitle}>Système de Paiement de Transport Urbain Sans Contact · En cours de développement</Text>
             
             <Text style={styles.description}>
@@ -356,19 +355,19 @@ export function CVDocument() {
             <View style={styles.subSection}>
               <Text style={styles.subSectionTitle}>Architecture et choix stratégiques des technologies :</Text>
               <Text style={styles.bulletPoint}>
-                1 Node.js / Express — API Gateway & Orchestration temps réel
+                1. Node.js / Express — API Gateway & Orchestration temps réel
               </Text>
               <Text style={styles.bulletPoint}>
-                2 Spring Boot (Java) — Service de transactions & logique métier critique
+                2. Spring Boot (Java) — Service de transactions & logique métier critique
               </Text>
               <Text style={styles.bulletPoint}>
-                3 Django REST Framework (Python) — Service de données, analytics & administration
+                3. Django REST Framework (Python) — Service de données, analytics & administration
               </Text>
               <Text style={styles.bulletPoint}>
-                4 Service Notifications (Node.js + WebSocket) — confirmation de paiement en temps réel
+                4. Service Notifications (Node.js + WebSocket) — confirmation de paiement en temps réel
               </Text>
               <Text style={styles.bulletPoint}>
-                5 Frontend mobile (React Native) — interface passager sans contact cross-platform
+                5. Frontend mobile (React Native) — interface passager sans contact cross-platform
               </Text>
             </View>
           </View>

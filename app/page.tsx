@@ -1,9 +1,17 @@
+'use client';
+
 import Header from "./components/Header";
-import { Briefcase, Code, FileText, Rocket, ExternalLink, ArrowRight, CheckCircle, Building, Award, BookOpen, Zap, Globe, TrendingUp, BarChart3, Target, Github, Calendar } from "lucide-react";
+import { Briefcase, Code, FileText, Rocket, ExternalLink, ArrowRight, CheckCircle, Building, Award, BookOpen, Zap, Globe, TrendingUp, BarChart3, Target, Github, Calendar, Quote, Eye } from "lucide-react";
 import Link from "next/link";
 import { ExperienceChart, TechStackChart, SkillsDonutChart, ProjectsTimelineChart } from "./components/SkillsChart";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+
+const PDFViewerDialog = dynamic(() => import('./components/PDFViewerDialog'), { ssr: false });
 
 export default function Home() {
+  const [showCV, setShowCV] = useState(false);
+
   return (
     <>
       <Header />
@@ -18,29 +26,31 @@ export default function Home() {
           </div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative">
-            {/* Status Badge */}
-            <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 bg-card-2 border border-secondary/40 rounded-[5px]">
-                <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                <span className="text-secondary text-xs sm:text-sm font-semibold">Disponible pour de nouveaux projets</span>
-              </div>
-            </div>
-
             {/* Main Content */}
-            <div className="text-center mb-8 sm:mb-12">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
-                Jean-Luc Kashindi Nestor
-              </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold mb-4 sm:mb-6 px-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">
-                  Ingénieur Fullstack Senior
-                </span>
-              </p>
-              <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
-                Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>. 
-                Spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
-                par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
-              </p>
+            <div className="mb-8 sm:mb-12">
+              
+              {/* Citation avec icône à gauche et bouton CV à droite */}
+              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-6 sm:mb-8 px-4">
+                <div className="w-full lg:max-w-2xl">
+                  <div className="flex items-start gap-4">
+                    <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0 mt-1" />
+                    <p className="text-sm sm:text-base lg:text-lg text-white/80 text-left leading-relaxed">
+                      Jean-Luc Kashindi Nestor un Ingénieur Fullstack Senior, Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>. 
+                      Spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
+                      par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Bouton Visualiser CV */}
+                <button
+                  onClick={() => setShowCV(true)}
+                  className="flex items-center gap-2 px-6 py-3 bg-white hover:bg-white/90 text-black rounded-lg transition-all hover:scale-105 whitespace-nowrap"
+                >
+                  <Eye className="w-5 h-5" />
+                  <span className="font-semibold">Visualiser mon CV</span>
+                </button>
+              </div>
             </div>
 
             {/* Stats Grid - Responsive */}
@@ -167,13 +177,6 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold border border-white/20 hover:bg-white/5 hover:border-white/30 transition-all text-sm sm:text-base"
               >
                 Voir mes réalisations
-              </Link>
-              <Link 
-                href="/cv" 
-                className="inline-flex items-center justify-center gap-2 bg-primary/20 text-primary border border-primary/40 px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-primary/30 hover:border-primary/60 transition-all text-sm sm:text-base"
-              >
-                <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
-                Visualiser mon CV
               </Link>
             </div>
           </div>
@@ -1282,12 +1285,6 @@ export default function Home() {
                 Me contacter
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                href="/cv"
-                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-10 py-4 rounded-lg font-medium border border-white/10 hover:bg-white/5 transition-all"
-              >
-                Télécharger mon CV
-              </Link>
             </div>
           </div>
         </section>
@@ -1338,6 +1335,9 @@ export default function Home() {
             </div>
           </div>
         </footer>
+        
+        {/* PDF Viewer Dialog */}
+        {showCV && <PDFViewerDialog visible={showCV} onHide={() => setShowCV(false)} />}
       </main>
     </>
   );

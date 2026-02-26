@@ -128,17 +128,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Availability */}
-                <div className="bg-gradient-to-br from-primary/10 to-card-2 border border-primary/30 rounded-xl p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-secondary text-sm font-semibold">Disponible</span>
-                  </div>
-                  <p className="text-sm text-white/70 leading-relaxed">
-                    Je suis actuellement disponible pour de nouveaux projets et collaborations. 
-                    N'hésitez pas à me contacter !
-                  </p>
-                </div>
               </div>
 
               {/* Contact Form */}

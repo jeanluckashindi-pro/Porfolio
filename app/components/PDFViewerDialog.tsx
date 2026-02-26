@@ -32,12 +32,15 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
     <Dialog
       header="Curriculum Vitae - Jean-Luc Kashindi Nestor"
       visible={visible}
-      style={{ width: '60vw', height: '100vh' }}
+      style={{ width: '60vw', maxWidth: '1200px', height: '95vh' }}
+      contentStyle={{ height: 'calc(95vh - 60px)', padding: '0' }}
       onHide={onHide}
       maximizable
       modal
+      breakpoints={{ '960px': '95vw', '640px': '100vw' }}
+      className="cv-dialog"
     >
-      <div style={{ width: '100%', height: 'calc(90vh - 100px)' }}>
+      <div style={{ width: '100%', height: '100%' }}>
         {mounted && PDFViewer && CVDocument ? (
           <PDFViewer width="100%" height="100%" showToolbar={true}>
             <CVDocument />
