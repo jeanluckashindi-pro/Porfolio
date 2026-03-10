@@ -18,21 +18,33 @@ export default function Home() {
       <main className="pt-16 min-h-screen bg-card-1">
         {/* Hero Section - Fully Responsive */}
         <section className="relative overflow-hidden bg-gradient-to-b from-card-2 via-card-1 to-card-1">
-          {/* Animated Background */}
-          <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.15),transparent_50%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.1),transparent_50%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+            backgroundImage: `url('/Jean-luc Kashindi 002.jpg')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+          }}>
+            {/* Dark Overlay for Text Readability */}
+            <div className="absolute inset-0 bg-black/65"></div>
+            
+            {/* Gradient Overlay for Better Blend */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-card-1"></div>
+          </div>
+
+          {/* Animated Background Accents (over image) */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.05),transparent_50%)]"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20 relative z-10">
             {/* Hero Content - Improved Mobile Layout */}
             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
               {/* Quote Section */}
               <div className="max-w-4xl mx-auto mb-6 sm:mb-10">
                 <div className="flex flex-col items-center gap-3 sm:gap-5">
-                  <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
-                  <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed px-2">
+                  <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary drop-shadow-lg" />
+                  <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed px-3 sm:px-2 font-medium drop-shadow-md">
                     <span className="text-white font-bold">Jean-Luc Kashindi Nestor</span>, Ingénieur Fullstack Senior. 
                     Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>, 
                     spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
@@ -45,7 +57,7 @@ export default function Home() {
               <div className="mb-10 sm:mb-12">
                 <button
                   onClick={() => setShowCV(true)}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-black rounded-xl font-bold transition-all hover:scale-105 shadow-xl text-base sm:text-lg"
+                  className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white hover:bg-white/95 text-black rounded-xl font-bold transition-all hover:scale-105 shadow-2xl hover:shadow-white/60 text-sm sm:text-base"
                 >
                   <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span>Visualiser mon CV</span>
@@ -55,47 +67,47 @@ export default function Home() {
 
             {/* Stats Grid - 4 Columns on All Screens */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12 lg:mb-16">
-              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-primary/50">
+              <div className="group bg-gradient-to-br from-primary/30 via-primary/20 to-primary/10 border border-primary/40 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-primary/60 backdrop-blur-sm shadow-lg">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-4 h-4 sm:w-6 sm:h-6 text-primary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-primary/30 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Briefcase className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">3+</div>
-                  <div className="text-xs text-white/60 font-medium">Ans d'expérience</div>
-                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Développement continu</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">3+</div>
+                  <div className="text-xs text-white/90 font-medium">Ans d'expérience</div>
+                  <div className="text-xs text-white/80 mt-1 hidden sm:block">Développement continu</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-secondary/50">
+              <div className="group bg-gradient-to-br from-secondary/30 via-secondary/20 to-secondary/10 border border-secondary/40 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-secondary/60 backdrop-blur-sm shadow-lg">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Rocket className="w-4 h-4 sm:w-6 sm:h-6 text-secondary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-secondary/30 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Rocket className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-1 sm:mb-2">15+</div>
-                  <div className="text-xs text-white/60 font-medium">Projets livrés</div>
-                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Solutions déployées</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">15+</div>
+                  <div className="text-xs text-white/90 font-medium">Projets livrés</div>
+                  <div className="text-xs text-white/80 mt-1 hidden sm:block">Solutions déployées</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-tertiary/50">
+              <div className="group bg-gradient-to-br from-tertiary/30 via-tertiary/20 to-tertiary/10 border border-tertiary/40 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-tertiary/60 backdrop-blur-sm shadow-lg">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Code className="w-4 h-4 sm:w-6 sm:h-6 text-tertiary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-tertiary/30 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Code className="w-4 h-4 sm:w-6 sm:h-6 text-black" />
                   </div>
-                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-1 sm:mb-2">12+</div>
-                  <div className="text-xs text-white/60 font-medium">Technologies</div>
-                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Stack moderne</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">12+</div>
+                  <div className="text-xs text-white/90 font-medium">Technologies</div>
+                  <div className="text-xs text-white/80 mt-1 hidden sm:block">Stack moderne</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-white/30">
+              <div className="group bg-gradient-to-br from-white/20 via-white/15 to-white/10 border border-white/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-white/40 backdrop-blur-sm shadow-lg">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Award className="w-4 h-4 sm:w-6 sm:h-6 text-white/80" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Award className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">100%</div>
-                  <div className="text-xs text-white/60 font-medium">Satisfaction</div>
-                  <div className="text-xs text-white/50 mt-1 hidden sm:block">Clients satisfaits</div>
+                  <div className="text-xs text-white/90 font-medium">Satisfaction</div>
+                  <div className="text-xs text-white/80 mt-1 hidden sm:block">Clients satisfaits</div>
                 </div>
               </div>
             </div>
