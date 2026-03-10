@@ -25,36 +25,36 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative">
-            {/* Main Content */}
-            <div className="mb-8 sm:mb-12">
-              
-              {/* Citation avec icône à gauche et bouton CV à droite */}
-              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-6 sm:mb-8 px-4">
-                <div className="w-full lg:max-w-2xl">
-                  <div className="flex items-start gap-4">
-                    <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm sm:text-base lg:text-lg text-white/80 text-left leading-relaxed">
-                      Jean-Luc Kashindi Nestor un Ingénieur Fullstack Senior, Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>. 
-                      Spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
-                      par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
-                    </p>
-                  </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative">
+            {/* Hero Content - Improved Mobile Layout */}
+            <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+              {/* Quote Section */}
+              <div className="max-w-4xl mx-auto mb-8 sm:mb-10">
+                <div className="flex flex-col items-center gap-4 sm:gap-5">
+                  <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
+                  <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed px-2">
+                    <span className="text-white font-bold">Jean-Luc Kashindi Nestor</span>, Ingénieur Fullstack Senior. 
+                    Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>, 
+                    spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
+                    par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
+                  </p>
                 </div>
-                
-                {/* Bouton Visualiser CV */}
+              </div>
+
+              {/* CTA Button */}
+              <div className="mb-10 sm:mb-12">
                 <button
                   onClick={() => setShowCV(true)}
-                  className="flex items-center gap-2 px-6 py-3 bg-white hover:bg-white/90 text-black rounded-lg transition-all hover:scale-105 whitespace-nowrap"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-black rounded-xl font-bold transition-all hover:scale-105 shadow-xl text-base sm:text-lg"
                 >
-                  <Eye className="w-5 h-5" />
-                  <span className="font-semibold">Visualiser mon CV</span>
+                  <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span>Visualiser mon CV</span>
                 </button>
               </div>
             </div>
 
-            {/* Stats Grid - Responsive */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12 px-2">
+            {/* Stats Grid - 4 Columns on All Screens */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 lg:mb-16">
               <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-primary/50">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
@@ -100,81 +100,75 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Highlight Cards - Responsive */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12 px-2">
-              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-primary/40 transition-all">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-3 min-w-0 flex-1">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Building className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-bold text-white truncate">Mediabox Burundi</div>
-                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-primary/40 rounded-[5px]">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                        <span className="text-xs text-primary font-semibold">Poste actuel</span>
-                      </div>
+            {/* Highlight Cards - Better Mobile Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12">
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Building className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Mediabox Burundi</h3>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-lg">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                      <span className="text-xs sm:text-sm text-primary font-semibold">Poste actuel</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-xs text-white/60 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                   Leader dans le développement de solutions numériques et revendeur officiel Starlink au Burundi
                 </p>
               </div>
 
-              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-secondary/40 transition-all">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-3 min-w-0 flex-1">
-                    <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-5 h-5 text-secondary" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-bold text-white truncate">Projets Gouvernementaux</div>
-                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-secondary/40 rounded-[5px]">
-                        <Award className="w-3 h-3 text-secondary" />
-                        <span className="text-xs text-secondary font-semibold">Échelle nationale</span>
-                      </div>
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-secondary/40 transition-all hover:shadow-xl hover:shadow-secondary/5">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Projets Gouvernementaux</h3>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary/10 border border-secondary/30 rounded-lg">
+                      <Award className="w-3.5 h-3.5 text-secondary" />
+                      <span className="text-xs sm:text-sm text-secondary font-semibold">Échelle nationale</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-xs text-white/60 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                   ODECA (Café), ISP Starlink, solutions pour institutions publiques et organisations internationales
                 </p>
               </div>
 
-              <div className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-5 hover:border-tertiary/40 transition-all sm:col-span-2 lg:col-span-1">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-3 min-w-0 flex-1">
-                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-5 h-5 text-tertiary" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="text-sm font-bold text-white truncate">Architecture Microservices</div>
-                      <div className="inline-flex items-center gap-1.5 mt-1 px-2 py-1 bg-card-2 border border-tertiary/40 rounded-[5px]">
-                        <Code className="w-3 h-3 text-tertiary" />
-                        <span className="text-xs text-tertiary font-semibold">Expert technique</span>
-                      </div>
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-tertiary/40 transition-all hover:shadow-xl hover:shadow-tertiary/5">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-tertiary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-tertiary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Architecture Microservices</h3>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-tertiary/10 border border-tertiary/30 rounded-lg">
+                      <Code className="w-3.5 h-3.5 text-tertiary" />
+                      <span className="text-xs sm:text-sm text-tertiary font-semibold">Expert technique</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-xs text-white/60 leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                   Conception de systèmes distribués scalables avec Spring Boot, React, Node.js, Angular
                 </p>
               </div>
             </div>
 
-            {/* CTAs - Responsive */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 sm:px-2">
+            {/* CTAs - Improved Mobile */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
               <Link 
                 href="/contact" 
-                className="group inline-flex items-center justify-center gap-2 bg-white text-black px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold hover:bg-white/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
+                className="group inline-flex items-center justify-center gap-3 bg-white text-black px-8 sm:px-10 py-4 rounded-xl font-bold hover:bg-white/90 transition-all hover:scale-105 shadow-2xl hover:shadow-white/20 text-base"
               >
                 Démarrer un projet
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 href="/projets/professionnels" 
-                className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg sm:rounded-xl font-semibold border border-white/20 hover:bg-white/5 hover:border-white/30 transition-all text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-3 bg-card-2 text-white px-8 sm:px-10 py-4 rounded-xl font-bold border-2 border-white/20 hover:bg-white/5 hover:border-white/40 transition-all hover:scale-105 text-base"
               >
                 Voir mes réalisations
               </Link>
