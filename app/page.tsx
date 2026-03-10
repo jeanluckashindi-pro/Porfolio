@@ -25,14 +25,14 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20 relative">
             {/* Hero Content - Improved Mobile Layout */}
-            <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16">
               {/* Quote Section */}
-              <div className="max-w-4xl mx-auto mb-8 sm:mb-10">
-                <div className="flex flex-col items-center gap-4 sm:gap-5">
-                  <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
-                  <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed px-2">
+              <div className="max-w-4xl mx-auto mb-6 sm:mb-10">
+                <div className="flex flex-col items-center gap-3 sm:gap-5">
+                  <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
+                  <p className="text-sm sm:text-base lg:text-lg text-white/90 leading-relaxed px-2">
                     <span className="text-white font-bold">Jean-Luc Kashindi Nestor</span>, Ingénieur Fullstack Senior. 
                     Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>, 
                     spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
@@ -54,111 +54,111 @@ export default function Home() {
             </div>
 
             {/* Stats Grid - 4 Columns on All Screens */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12 lg:mb-16">
-              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-primary/50">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+              <div className="group bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-primary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Briefcase className="w-4 h-4 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">3+</div>
-                  <div className="text-xs sm:text-sm text-white/70 font-medium">Ans d'expérience</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-primary mb-1 sm:mb-2">3+</div>
+                  <div className="text-xs text-white/60 font-medium">Ans d'expérience</div>
                   <div className="text-xs text-white/50 mt-1 hidden sm:block">Développement continu</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-secondary/50">
+              <div className="group bg-gradient-to-br from-secondary/20 via-secondary/10 to-transparent border border-secondary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-secondary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Rocket className="w-4 h-4 sm:w-6 sm:h-6 text-secondary" />
                   </div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-1 sm:mb-2">15+</div>
-                  <div className="text-xs sm:text-sm text-white/70 font-medium">Projets livrés</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-secondary mb-1 sm:mb-2">15+</div>
+                  <div className="text-xs text-white/60 font-medium">Projets livrés</div>
                   <div className="text-xs text-white/50 mt-1 hidden sm:block">Solutions déployées</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-tertiary/50">
+              <div className="group bg-gradient-to-br from-tertiary/20 via-tertiary/10 to-transparent border border-tertiary/30 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-tertiary/50">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Code className="w-5 h-5 sm:w-6 sm:h-6 text-tertiary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Code className="w-4 h-4 sm:w-6 sm:h-6 text-tertiary" />
                   </div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-1 sm:mb-2">12+</div>
-                  <div className="text-xs sm:text-sm text-white/70 font-medium">Technologies</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-tertiary mb-1 sm:mb-2">12+</div>
+                  <div className="text-xs text-white/60 font-medium">Technologies</div>
                   <div className="text-xs text-white/50 mt-1 hidden sm:block">Stack moderne</div>
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-105 transition-all hover:border-white/30">
+              <div className="group bg-gradient-to-br from-white/15 via-white/5 to-transparent border border-white/20 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-white/30">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
-                    <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white/80" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform">
+                    <Award className="w-4 h-4 sm:w-6 sm:h-6 text-white/80" />
                   </div>
-                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">100%</div>
-                  <div className="text-xs sm:text-sm text-white/70 font-medium">Satisfaction</div>
+                  <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">100%</div>
+                  <div className="text-xs text-white/60 font-medium">Satisfaction</div>
                   <div className="text-xs text-white/50 mt-1 hidden sm:block">Clients satisfaits</div>
                 </div>
               </div>
             </div>
 
             {/* Highlight Cards - Better Mobile Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto mb-10 sm:mb-12">
-              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Building className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12">
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Building className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Mediabox Burundi</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-white mb-2">Mediabox Burundi</h3>
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-lg">
                       <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                      <span className="text-xs sm:text-sm text-primary font-semibold">Poste actuel</span>
+                      <span className="text-xs text-primary font-semibold">Poste actuel</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">
                   Leader dans le développement de solutions numériques et revendeur officiel Starlink au Burundi
                 </p>
               </div>
 
-              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-secondary/40 transition-all hover:shadow-xl hover:shadow-secondary/5">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:border-secondary/40 transition-all hover:shadow-xl hover:shadow-secondary/5">
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Globe className="w-5 h-5 sm:w-7 sm:h-7 text-secondary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Projets Gouvernementaux</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-white mb-2">Projets Gouvernementaux</h3>
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary/10 border border-secondary/30 rounded-lg">
                       <Award className="w-3.5 h-3.5 text-secondary" />
-                      <span className="text-xs sm:text-sm text-secondary font-semibold">Échelle nationale</span>
+                      <span className="text-xs text-secondary font-semibold">Échelle nationale</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">
                   ODECA (Café), ISP Starlink, solutions pour institutions publiques et organisations internationales
                 </p>
               </div>
 
-              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl p-5 sm:p-6 hover:border-tertiary/40 transition-all hover:shadow-xl hover:shadow-tertiary/5">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 bg-tertiary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-tertiary" />
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:border-tertiary/40 transition-all hover:shadow-xl hover:shadow-tertiary/5">
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Zap className="w-5 h-5 sm:w-7 sm:h-7 text-tertiary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-white mb-2">Architecture Microservices</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-white mb-2">Architecture Microservices</h3>
                     <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-tertiary/10 border border-tertiary/30 rounded-lg">
                       <Code className="w-3.5 h-3.5 text-tertiary" />
-                      <span className="text-xs sm:text-sm text-tertiary font-semibold">Expert technique</span>
+                      <span className="text-xs text-tertiary font-semibold">Expert technique</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-sm text-white/70 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/70 leading-relaxed">
                   Conception de systèmes distribués scalables avec Spring Boot, React, Node.js, Angular
                 </p>
               </div>
             </div>
 
             {/* CTAs - Improved Mobile */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
               <Link 
                 href="/contact" 
                 className="group inline-flex items-center justify-center gap-3 bg-white text-black px-8 sm:px-10 py-4 rounded-xl font-bold hover:bg-white/90 transition-all hover:scale-105 shadow-2xl hover:shadow-white/20 text-base"
@@ -177,22 +177,22 @@ export default function Home() {
         </section>
 
         {/* Current Position - Redesigned */}
-        <section className="py-24 relative">
+        <section className="py-16 sm:py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-card-2/50 to-transparent"></div>
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm mb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-8 sm:mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm mb-3 sm:mb-4">
                 <Briefcase className="w-4 h-4" />
                 Poste actuel
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Actuellement</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Actuellement</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Mon rôle et mes responsabilités chez Mediabox Burundi
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
-              <div className="p-8 sm:p-12">
+            <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
+              <div className="p-6 sm:p-8 lg:p-12">
                 <div className="flex flex-col lg:flex-row gap-8 items-start">
                   {/* Left - Company Logo/Icon */}
                   <div className="w-full lg:w-auto">
@@ -279,24 +279,24 @@ export default function Home() {
         </section>
 
         {/* Professional Journey Section - NEW */}
-        <section className="py-24 relative bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm mb-4">
+        <section className="py-16 sm:py-24 relative bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-xs sm:text-sm mb-3 sm:mb-4">
                 <Calendar className="w-4 h-4" />
                 Mon parcours
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Parcours Professionnel</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Parcours Professionnel</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Une progression continue dans le développement de solutions numériques innovantes
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
               {/* Timeline Column */}
               <div className="lg:col-span-2">
-                <div className="bg-card-2 border border-white/10 rounded-2xl p-8">
-                  <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-2">
+                <div className="bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-6 sm:mb-8 flex items-center gap-2">
                     <Briefcase className="w-5 h-5 text-primary" />
                     Expériences Professionnelles
                   </h3>
@@ -639,23 +639,23 @@ export default function Home() {
         </section>
 
         {/* Projects - Redesigned */}
-        <section className="py-24 bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-sm mb-4">
+        <section className="py-16 sm:py-24 bg-gradient-to-b from-transparent via-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-xs sm:text-sm mb-3 sm:mb-4">
                 <Rocket className="w-4 h-4" />
                 En développement
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Projets en Cours</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Projets en Cours</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Solutions innovantes que je développe actuellement pour transformer le paysage numérique
               </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* ODECA */}
-              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all hover:-translate-y-2">
-                <div className="p-8">
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl overflow-hidden hover:border-primary/30 transition-all hover:-translate-y-2">
+                <div className="p-6 sm:p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Code className="w-7 h-7 text-primary" />
@@ -697,8 +697,8 @@ export default function Home() {
               </div>
 
               {/* ISP Starlink */}
-              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-secondary/30 transition-all hover:-translate-y-2">
-                <div className="p-8">
+              <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl overflow-hidden hover:border-secondary/30 transition-all hover:-translate-y-2">
+                <div className="p-6 sm:p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Globe className="w-7 h-7 text-secondary" />
@@ -740,9 +740,9 @@ export default function Home() {
               </div>
 
               {/* Ufaranga - Featured */}
-              <div className="group bg-gradient-to-br from-primary/10 via-card-2 to-card-2 border border-primary/30 rounded-2xl overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-2 relative">
+              <div className="group bg-gradient-to-br from-primary/10 via-card-2 to-card-2 border border-primary/30 rounded-lg sm:rounded-2xl overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-2 relative">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-                <div className="p-8 relative">
+                <div className="p-6 sm:p-8 relative">
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-primary/40 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Zap className="w-7 h-7 text-primary" />
@@ -790,109 +790,109 @@ export default function Home() {
         </section>
 
         {/* Evolution & Statistics Section - NEW */}
-        <section className="py-24 relative">
+        <section className="py-16 sm:py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-card-2/30 via-transparent to-card-2/30"></div>
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-full text-tertiary text-sm mb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-full text-tertiary text-xs sm:text-sm mb-3 sm:mb-4">
                 <TrendingUp className="w-4 h-4" />
                 Évolution & Croissance
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Mon Parcours en Chiffres</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Mon Parcours en Chiffres</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Une progression constante dans le développement de compétences et la réalisation de projets
               </p>
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="bg-gradient-to-br from-primary/10 to-card-2 border border-primary/20 rounded-2xl p-6 hover:border-primary/40 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                    <Target className="w-6 h-6 text-primary" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+              <div className="bg-gradient-to-br from-primary/10 to-card-2 border border-primary/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-primary/40 transition-all">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <Target className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-primary">15+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-primary">15+</div>
                     <div className="text-xs text-white/60">Total</div>
                   </div>
                 </div>
-                <div className="text-sm font-medium text-white mb-1">Projets Complétés</div>
+                <div className="text-xs sm:text-sm font-medium text-white mb-1">Projets Complétés</div>
                 <div className="text-xs text-white/50">Depuis 2022</div>
               </div>
 
-              <div className="bg-gradient-to-br from-secondary/10 to-card-2 border border-secondary/20 rounded-2xl p-6 hover:border-secondary/40 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center">
-                    <Code className="w-6 h-6 text-secondary" />
+              <div className="bg-gradient-to-br from-secondary/10 to-card-2 border border-secondary/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-secondary/40 transition-all">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <Code className="w-5 sm:w-6 h-5 sm:h-6 text-secondary" />
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-secondary">12+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-secondary">12+</div>
                     <div className="text-xs text-white/60">Maîtrisées</div>
                   </div>
                 </div>
-                <div className="text-sm font-medium text-white mb-1">Technologies</div>
+                <div className="text-xs sm:text-sm font-medium text-white mb-1">Technologies</div>
                 <div className="text-xs text-white/50">En constante évolution</div>
               </div>
 
-              <div className="bg-gradient-to-br from-tertiary/10 to-card-2 border border-tertiary/20 rounded-2xl p-6 hover:border-tertiary/40 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center">
-                    <Award className="w-6 h-6 text-tertiary" />
+              <div className="bg-gradient-to-br from-tertiary/10 to-card-2 border border-tertiary/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-tertiary/40 transition-all">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <Award className="w-5 sm:w-6 h-5 sm:h-6 text-tertiary" />
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-tertiary">100%</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-tertiary">100%</div>
                     <div className="text-xs text-white/60">Taux</div>
                   </div>
                 </div>
-                <div className="text-sm font-medium text-white mb-1">Satisfaction Client</div>
+                <div className="text-xs sm:text-sm font-medium text-white mb-1">Satisfaction Client</div>
                 <div className="text-xs text-white/50">Projets livrés avec succès</div>
               </div>
 
-              <div className="bg-gradient-to-br from-white/10 to-card-2 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white/60" />
+              <div className="bg-gradient-to-br from-white/10 to-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-white/20 transition-all">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-5 sm:w-6 h-5 sm:h-6 text-white/60" />
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-white">3+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white">3+</div>
                     <div className="text-xs text-white/60">Années</div>
                   </div>
                 </div>
-                <div className="text-sm font-medium text-white mb-1">Expérience Continue</div>
+                <div className="text-xs sm:text-sm font-medium text-white mb-1">Expérience Continue</div>
                 <div className="text-xs text-white/50">Chez Mediabox Burundi</div>
               </div>
             </div>
 
             {/* Charts Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {/* Experience Evolution Chart */}
-              <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-primary" />
+              <div className="bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-9 sm:w-10 h-9 sm:h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">Évolution de l'Expérience</h3>
-                    <p className="text-sm text-white/60">Croissance au fil des années</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">Évolution de l'Expérience</h3>
+                    <p className="text-xs sm:text-sm text-white/60">Croissance au fil des années</p>
                   </div>
                 </div>
-                <div className="h-[300px]">
+                <div className="h-[250px] sm:h-[300px]">
                   <ExperienceChart />
                 </div>
               </div>
 
               {/* Skills Donut Chart */}
-              <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
-                    <Target className="w-5 h-5 text-secondary" />
+              <div className="bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-secondary/30 transition-all">
+                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                  <div className="w-9 sm:w-10 h-9 sm:h-10 bg-secondary/20 rounded-lg flex items-center justify-center">
+                    <Target className="w-4 sm:w-5 h-4 sm:h-5 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">Répartition des Compétences</h3>
-                    <p className="text-sm text-white/60">Distribution par domaine d'expertise</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-white">Répartition des Compétences</h3>
+                    <p className="text-xs sm:text-sm text-white/60">Distribution par domaine d'expertise</p>
                   </div>
                 </div>
-                <div className="h-[300px]">
+                <div className="h-[250px] sm:h-[300px]">
                   <SkillsDonutChart />
                 </div>
               </div>
@@ -900,33 +900,33 @@ export default function Home() {
               {/* Tech Stack Proficiency & Projects Timeline */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:col-span-2">
                 {/* Tech Stack */}
-                <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-tertiary/30 transition-all">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
-                      <BarChart3 className="w-5 h-5 text-tertiary" />
+                <div className="bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-tertiary/30 transition-all">
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <div className="w-9 sm:w-10 h-9 sm:h-10 bg-tertiary/20 rounded-lg flex items-center justify-center">
+                      <BarChart3 className="w-4 sm:w-5 h-4 sm:h-5 text-tertiary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Maîtrise des Technologies</h3>
-                      <p className="text-sm text-white/60">Niveau d'expertise par technologie</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-white">Maîtrise des Technologies</h3>
+                      <p className="text-xs sm:text-sm text-white/60">Niveau d'expertise par technologie</p>
                     </div>
                   </div>
-                  <div className="h-[350px]">
+                  <div className="h-[300px] sm:h-[350px]">
                     <TechStackChart />
                   </div>
                 </div>
 
                 {/* Activity Chart */}
-                <div className="bg-card-2 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <TrendingUp className="w-5 h-5 text-primary" />
+                <div className="bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all">
+                  <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                    <div className="w-9 sm:w-10 h-9 sm:h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                      <TrendingUp className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Activité de Développement</h3>
-                      <p className="text-sm text-white/60">Contributions mensuelles 2026</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-white">Activité de Développement</h3>
+                      <p className="text-xs sm:text-sm text-white/60">Contributions mensuelles 2026</p>
                     </div>
                   </div>
-                  <div className="h-[350px]">
+                  <div className="h-[300px] sm:h-[350px]">
                     <ProjectsTimelineChart />
                   </div>
                 </div>
@@ -936,22 +936,22 @@ export default function Home() {
         </section>
 
         {/* Publications & Expertise - Expanded */}
-        <section className="py-24 relative">
+        <section className="py-16 sm:py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card-2/30 to-transparent"></div>
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 relative">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-full text-tertiary text-sm mb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-tertiary/10 border border-tertiary/20 rounded-full text-tertiary text-xs sm:text-sm mb-3 sm:mb-4">
                 <BookOpen className="w-4 h-4" />
                 Partage de connaissances
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Publications & Articles</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Publications & Articles</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Contributions techniques et analyses sur le développement logiciel et la transformation numérique
               </p>
             </div>
             
             {/* Featured Publication */}
-            <div className="mb-12">
+            <div className="mb-8 sm:mb-12">
               <Link href="/publications" className="group block bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8 sm:p-12">
                   <div className="lg:col-span-2">
@@ -987,15 +987,15 @@ export default function Home() {
             </div>
 
             {/* Publications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-secondary/30 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Globe className="w-6 h-6 text-secondary" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 sm:mb-12">
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-secondary/30 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Globe className="w-5 sm:w-6 h-5 sm:h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-secondary transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-secondary transition-colors">
                   Digitalisation des Services Publics en Afrique
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Défis et opportunités du numérique gouvernemental dans le contexte africain avec études de cas.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1004,14 +1004,14 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-tertiary/30 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6 text-tertiary" />
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-tertiary/30 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Zap className="w-5 sm:w-6 h-5 sm:h-6 text-tertiary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-tertiary transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-tertiary transition-colors">
                   Optimisation des Performances Backend
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Techniques avancées pour améliorer les temps de réponse et la scalabilité des APIs REST.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1020,14 +1020,14 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-primary/30 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Award className="w-6 h-6 text-primary" />
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-primary/30 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Award className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                   Sécurité des Applications Web Modernes
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Best practices pour sécuriser vos applications contre les vulnérabilités courantes.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1036,14 +1036,14 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Code className="w-6 h-6 text-white/60" />
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-white/20 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Code className="w-5 sm:w-6 h-5 sm:h-6 text-white/60" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-white transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-white transition-colors">
                   React Server Components : Guide Pratique
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Comprendre et implémenter les Server Components dans vos applications Next.js.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1052,14 +1052,14 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-secondary/30 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Rocket className="w-6 h-6 text-secondary" />
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-secondary/30 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Rocket className="w-5 sm:w-6 h-5 sm:h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-secondary transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-secondary transition-colors">
                   CI/CD avec GitHub Actions
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Automatiser vos déploiements et tests avec des workflows GitHub Actions efficaces.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1068,14 +1068,14 @@ export default function Home() {
                 </div>
               </Link>
 
-              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-2xl p-6 hover:border-tertiary/30 transition-all hover:-translate-y-1">
-                <div className="w-12 h-12 bg-tertiary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <FileText className="w-6 h-6 text-tertiary" />
+              <Link href="/publications" className="group bg-card-2 border border-white/10 rounded-lg sm:rounded-2xl p-4 sm:p-6 hover:border-tertiary/30 transition-all hover:-translate-y-1">
+                <div className="w-10 sm:w-12 h-10 sm:h-12 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <FileText className="w-5 sm:w-6 h-5 sm:h-6 text-tertiary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-tertiary transition-colors">
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3 group-hover:text-tertiary transition-colors">
                   Design Patterns en Java Spring
                 </h3>
-                <p className="text-sm text-white/60 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 mb-3 sm:mb-4 leading-relaxed">
                   Les patterns essentiels pour structurer vos applications Spring Boot professionnelles.
                 </p>
                 <div className="flex items-center justify-between text-xs">
@@ -1098,26 +1098,26 @@ export default function Home() {
         </section>
 
         {/* Services Section - NEW */}
-        <section className="py-24 relative bg-gradient-to-b from-card-2/20 to-transparent">
-          <div className="max-w-7xl mx-auto px-6 sm:px-8">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm mb-4">
+        <section className="py-16 sm:py-24 relative bg-gradient-to-b from-card-2/20 to-transparent">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm mb-3 sm:mb-4">
                 <Code className="w-4 h-4" />
                 Services proposés
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">Ce que je peux faire pour vous</h2>
-              <p className="text-lg text-white/60 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Ce que je peux faire pour vous</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
                 Des solutions complètes pour vos besoins en développement et architecture logicielle
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
-                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
-                  <Code className="w-7 h-7 text-primary" />
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
+                <div className="w-12 sm:w-14 h-12 sm:h-14 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Code className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Développement Fullstack</h3>
-                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Développement Fullstack</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-xs sm:text-sm">
                   Création d'applications web complètes avec Spring Boot, React, Node.js et Angular. 
                   De la conception à la mise en production.
                 </p>
@@ -1137,12 +1137,12 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-secondary/30 transition-all hover:-translate-y-1">
-                <div className="w-14 h-14 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
-                  <Building className="w-7 h-7 text-secondary" />
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-secondary/30 transition-all hover:-translate-y-1">
+                <div className="w-12 sm:w-14 h-12 sm:h-14 bg-secondary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Building className="w-6 sm:w-7 h-6 sm:h-7 text-secondary" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Architecture Microservices</h3>
-                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Architecture Microservices</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-xs sm:text-sm">
                   Conception et implémentation d'architectures distribuées scalables et résilientes 
                   pour des systèmes complexes.
                 </p>
@@ -1162,12 +1162,12 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-tertiary/30 transition-all hover:-translate-y-1">
-                <div className="w-14 h-14 bg-tertiary/20 rounded-xl flex items-center justify-center mb-6">
-                  <Rocket className="w-7 h-7 text-tertiary" />
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-tertiary/30 transition-all hover:-translate-y-1">
+                <div className="w-12 sm:w-14 h-12 sm:h-14 bg-tertiary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Rocket className="w-6 sm:w-7 h-6 sm:h-7 text-tertiary" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">DevOps & Cloud</h3>
-                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">DevOps & Cloud</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-xs sm:text-sm">
                   Automatisation des déploiements, CI/CD, containerisation et gestion d'infrastructure cloud.
                 </p>
                 <ul className="space-y-2">
@@ -1186,12 +1186,12 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-2xl p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
-                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-primary" />
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 hover:border-primary/30 transition-all hover:-translate-y-1">
+                <div className="w-12 sm:w-14 h-12 sm:h-14 bg-primary/20 rounded-lg sm:rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Target className="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Conseil Technique</h3>
-                <p className="text-white/70 leading-relaxed mb-4 text-sm">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Conseil Technique</h3>
+                <p className="text-white/70 leading-relaxed mb-4 text-xs sm:text-sm">
                   Accompagnement stratégique pour vos choix technologiques et l'optimisation de vos systèmes existants.
                 </p>
                 <ul className="space-y-2">
