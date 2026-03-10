@@ -17,18 +17,12 @@ export default function Home() {
       <Header />
       <main className="pt-16 min-h-screen bg-card-1">
         {/* Hero Section - Fully Responsive */}
-        <section className="relative overflow-hidden bg-gradient-to-b from-card-2 via-card-1 to-card-1">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-            backgroundImage: `url('/Jean-luc Kashindi 002.jpg')`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'
-          }}>
-            {/* Dark Overlay for Text Readability */}
-            <div className="absolute inset-0 bg-black/65"></div>
-            
-            {/* Gradient Overlay for Better Blend */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-card-1"></div>
+        <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-card-2 to-secondary/10">
+          {/* Animated Background */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.15),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(253,214,99,0.05),transparent_70%)]"></div>
           </div>
 
           {/* Animated Background Accents (over image) */}
