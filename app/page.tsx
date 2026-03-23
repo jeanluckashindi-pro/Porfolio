@@ -3,6 +3,7 @@
 import Header from "./components/Header";
 import { Briefcase, Code, FileText, Rocket, ExternalLink, ArrowRight, CheckCircle, Building, Award, BookOpen, Zap, Globe, TrendingUp, BarChart3, Target, Github, Calendar, Quote, Eye } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { ExperienceChart, TechStackChart, SkillsDonutChart, ProjectsTimelineChart } from "./components/SkillsChart";
 import { useState } from "react";
 import dynamic from "next/dynamic";
@@ -31,17 +32,92 @@ export default function Home() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(129,201,149,0.05),transparent_50%)]"></div>
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-20 relative z-10">
-            {/* Hero Content - Improved Mobile Layout */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 relative z-10">
+
+            {/* ── MOBILE HERO (< sm) ── */}
+            <div className="flex flex-col items-center text-center sm:hidden pb-2">
+
+              {/* Photo */}
+              <div className="relative mb-5">
+                <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-primary/40 shadow-xl shadow-primary/20">
+                  <Image
+                    src="/profil Jlk.jpeg"
+                    alt="Jean-Luc Kashindi Nestor"
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Name & title */}
+              <h1 className="text-2xl font-bold text-white mb-1 leading-tight">Jean-Luc Kashindi Nestor</h1>
+              <p className="text-primary font-semibold text-sm mb-4">Ingénieur Fullstack Senior</p>
+
+              {/* Company pills */}
+              <div className="flex gap-2 mb-5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-card-2 border border-primary/30 rounded-full text-xs text-white/80 font-medium">
+                  <Building className="w-3 h-3 text-primary" />
+                  Mediabox Burundi
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-card-2 border border-secondary/30 rounded-full text-xs text-white/80 font-medium">
+                  <Rocket className="w-3 h-3 text-secondary" />
+                  Dewiya Tech
+                </span>
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-4 gap-2 w-full mb-6">
+                <div className="flex flex-col items-center py-3 bg-white/5 rounded-xl border border-white/10">
+                  <span className="text-xl font-bold text-white">3+</span>
+                  <span className="text-[10px] text-white/50 mt-0.5">ans</span>
+                </div>
+                <div className="flex flex-col items-center py-3 bg-white/5 rounded-xl border border-white/10">
+                  <span className="text-xl font-bold text-white">15+</span>
+                  <span className="text-[10px] text-white/50 mt-0.5">projets</span>
+                </div>
+                <div className="flex flex-col items-center py-3 bg-white/5 rounded-xl border border-white/10">
+                  <span className="text-xl font-bold text-white">12+</span>
+                  <span className="text-[10px] text-white/50 mt-0.5">technos</span>
+                </div>
+                <div className="flex flex-col items-center py-3 bg-white/5 rounded-xl border border-white/10">
+                  <span className="text-xl font-bold text-white">100%</span>
+                  <span className="text-[10px] text-white/50 mt-0.5">satisf.</span>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col gap-3 w-full">
+                <Link
+                  href="/contact"
+                  className="flex items-center justify-center gap-2 bg-white text-black py-3.5 rounded-2xl font-bold text-sm"
+                >
+                  Démarrer un projet
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <button
+                  onClick={() => setShowCV(true)}
+                  className="flex items-center justify-center gap-2 bg-white/5 border border-white/15 text-white py-3.5 rounded-2xl font-semibold text-sm"
+                >
+                  <Eye className="w-4 h-4" />
+                  Voir mon CV
+                </button>
+              </div>
+
+            </div>
+
+            {/* ── DESKTOP HERO (≥ sm) ── */}
+            <div className="hidden sm:block">
+            {/* Hero Content */}
             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
               {/* Quote Section */}
               <div className="max-w-4xl mx-auto mb-6 sm:mb-10">
                 <div className="flex flex-col items-center gap-3 sm:gap-5">
                   <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary drop-shadow-lg" />
                   <p className="text-sm sm:text-base lg:text-lg text-white leading-relaxed px-3 sm:px-2 font-medium drop-shadow-md">
-                    <span className="text-white font-bold">Jean-Luc Kashindi Nestor</span>, Ingénieur Fullstack Senior. 
-                    Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>, 
-                    spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale 
+                    <span className="text-white font-bold">Jean-Luc Kashindi Nestor</span>, Ingénieur Fullstack Senior.
+                    Architecte de solutions numériques à <span className="text-white font-semibold">fort impact</span>,
+                    spécialisé dans la conception et le déploiement de systèmes utilisés à l'échelle nationale
                     par des <span className="text-primary">institutions gouvernementales</span> et <span className="text-secondary">organisations internationales</span>.
                   </p>
                 </div>
@@ -59,7 +135,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Stats Grid - 4 Columns on All Screens */}
+            {/* Stats Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12 lg:mb-16">
               <div className="group bg-gradient-to-br from-primary/30 via-primary/20 to-primary/10 border border-primary/40 rounded-lg sm:rounded-2xl p-3 sm:p-6 hover:scale-105 transition-all hover:border-primary/60 backdrop-blur-sm shadow-lg">
                 <div className="flex flex-col items-center text-center">
@@ -106,7 +182,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Highlight Cards - Better Mobile Layout */}
+            {/* Highlight Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-6xl mx-auto mb-8 sm:mb-12">
               <div className="group bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-xl p-4 sm:p-6 hover:border-primary/40 transition-all hover:shadow-xl hover:shadow-primary/5">
                 <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
@@ -172,114 +248,139 @@ export default function Home() {
                 Démarrer un projet
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                href="/projets/professionnels" 
+              <Link
+                href="/projets/professionnels"
                 className="inline-flex items-center justify-center gap-3 bg-card-2 text-white px-8 sm:px-10 py-4 rounded-xl font-bold border-2 border-white/20 hover:bg-white/5 hover:border-white/40 transition-all hover:scale-105 text-base"
               >
                 Voir mes réalisations
               </Link>
             </div>
+            </div>{/* end hidden sm:block */}
           </div>
         </section>
 
-        {/* Current Position - Redesigned */}
+        {/* Current Positions */}
         <section className="py-16 sm:py-24 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-card-2/50 to-transparent"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-8 sm:mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm mb-3 sm:mb-4">
                 <Briefcase className="w-4 h-4" />
-                Poste actuel
+                Postes actuels
               </div>
               <h2 className="text-2xl sm:text-5xl font-bold text-white mb-2 sm:mb-4">Actuellement</h2>
               <p className="text-sm sm:text-base lg:text-lg text-white/60 max-w-2xl mx-auto">
-                Mon rôle et mes responsabilités chez Mediabox Burundi
+                Deux postes en parallèle — Fullstack Senior & Développeur Mobile
               </p>
             </div>
-            
-            <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-lg sm:rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
-              <div className="p-6 sm:p-8 lg:p-12">
-                <div className="flex flex-col lg:flex-row gap-8 items-start">
-                  {/* Left - Company Logo/Icon */}
-                  <div className="w-full lg:w-auto">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl flex items-center justify-center mb-6 lg:mb-0">
-                      <Building className="w-12 h-12 text-primary" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+
+              {/* Mediabox */}
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:border-primary/30 transition-all">
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="w-14 h-14 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Building className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary/10 rounded-full text-primary text-xs font-medium">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></div>
+                          Actif
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/10 rounded-full text-secondary text-xs font-medium">
+                          <Zap className="w-3 h-3" />
+                          Temps plein
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-white">Ingénieur Fullstack Senior</h3>
+                      <div className="flex flex-wrap items-center gap-2 mt-1">
+                        <span className="text-primary font-semibold text-sm">Mediabox Burundi</span>
+                        <span className="text-white/40 text-xs">•</span>
+                        <span className="text-white/50 text-xs">2022 – Présent</span>
+                      </div>
                     </div>
                   </div>
 
-                  {/* Right - Content */}
-                  <div className="flex-1">
-                    <div className="flex flex-wrap items-center gap-3 mb-4">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-primary text-xs font-medium">
-                        <CheckCircle className="w-3 h-3" />
-                        Entreprise Leader
-                      </div>
-                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/10 rounded-full text-secondary text-xs font-medium">
-                        <Zap className="w-3 h-3" />
-                        Temps plein
-                      </div>
-                    </div>
+                  <p className="text-white/60 text-sm leading-relaxed mb-5">
+                    Revendeur légal officiel Starlink au Burundi. Conception et déploiement de solutions numériques pour clients publics et privés.
+                  </p>
 
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">Ingénieur Fullstack Senior</h3>
-                    
-                    <div className="flex flex-wrap items-center gap-3 mb-6">
-                      <span className="text-xl font-semibold text-primary">Mediabox Burundi</span>
-                      <span className="text-white/40">•</span>
-                      <span className="text-white/60">2022 - Présent</span>
-                      <span className="text-white/40">•</span>
-                      <span className="text-white/60">3+ ans</span>
-                    </div>
-
-                    <p className="text-white/70 leading-relaxed mb-6 text-base sm:text-lg">
-                      Mediabox Burundi est le <span className="text-white font-medium">revendeur légal officiel Starlink</span> au Burundi. 
-                      En charge de la conception, du développement et du déploiement de solutions numériques stratégiques 
-                      pour des clients publics et privés.
-                    </p>
-
-                    {/* Responsibilities */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/70">Architecture de solutions complexes</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/70">Développement fullstack avancé</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-tertiary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/70">Gestion de projets gouvernementaux</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-white/70">Intégration API Starlink</span>
-                      </div>
-                    </div>
-
-                    {/* Tech Stack */}
-                    <div className="mb-6">
-                      <div className="text-sm text-white/50 mb-3">Stack technique principal</div>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-4 py-2 bg-primary/10 text-primary text-sm rounded-lg border border-primary/20">Spring Boot</span>
-                        <span className="px-4 py-2 bg-secondary/10 text-secondary text-sm rounded-lg border border-secondary/20">React</span>
-                        <span className="px-4 py-2 bg-tertiary/10 text-tertiary text-sm rounded-lg border border-tertiary/20">Node.js</span>
-                        <span className="px-4 py-2 bg-white/5 text-white/60 text-sm rounded-lg border border-white/10">Angular</span>
-                        <span className="px-4 py-2 bg-white/5 text-white/60 text-sm rounded-lg border border-white/10">Microservices</span>
-                      </div>
-                    </div>
-
-                    <a 
-                      href="https://mediabox.bi" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group"
-                    >
-                      Visiter le site web
-                      <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </a>
+                  <div className="grid grid-cols-1 gap-2 mb-5">
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0" /><span className="text-xs text-white/70">Architecture de solutions complexes</span></div>
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-secondary flex-shrink-0" /><span className="text-xs text-white/70">Développement fullstack avancé</span></div>
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-tertiary flex-shrink-0" /><span className="text-xs text-white/70">Gestion de projets gouvernementaux</span></div>
                   </div>
+
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    <span className="px-2.5 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">Spring Boot</span>
+                    <span className="px-2.5 py-1 bg-secondary/10 text-secondary text-xs rounded-lg border border-secondary/20">React</span>
+                    <span className="px-2.5 py-1 bg-tertiary/10 text-tertiary text-xs rounded-lg border border-tertiary/20">Node.js</span>
+                    <span className="px-2.5 py-1 bg-white/5 text-white/60 text-xs rounded-lg border border-white/10">Angular</span>
+                  </div>
+
+                  <a href="https://mediabox.bi" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-primary text-sm hover:text-primary/80 transition-colors group">
+                    Visiter le site
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
                 </div>
               </div>
+
+              {/* Dewiya Tech */}
+              <div className="bg-gradient-to-br from-card-2 to-card-1 border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:border-secondary/30 transition-all">
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="w-14 h-14 bg-gradient-to-br from-secondary/30 to-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Rocket className="w-7 h-7 text-secondary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-secondary/10 rounded-full text-secondary text-xs font-medium">
+                          <div className="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse"></div>
+                          Nouveau
+                        </span>
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/10 rounded-full text-white/60 text-xs font-medium">
+                          <Briefcase className="w-3 h-3" />
+                          Contrat
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-bold text-white">Développeur Mobile Fullstack</h3>
+                      <div className="flex flex-wrap items-center gap-2 mt-1">
+                        <span className="text-secondary font-semibold text-sm">Dewiya Tech</span>
+                        <span className="text-white/40 text-xs">•</span>
+                        <span className="text-white/50 text-xs">Mars 2026 – Présent</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-white/60 text-sm leading-relaxed mb-5">
+                    Développement d'applications mobiles et solutions fullstack. Contrat signé en mars 2026, en parallèle de Mediabox Burundi.
+                  </p>
+
+                  <div className="grid grid-cols-1 gap-2 mb-5">
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-secondary flex-shrink-0" /><span className="text-xs text-white/70">Développement d'applications mobiles</span></div>
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0" /><span className="text-xs text-white/70">Architecture fullstack mobile-first</span></div>
+                    <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-tertiary flex-shrink-0" /><span className="text-xs text-white/70">Intégration APIs & services backend</span></div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    <span className="px-2.5 py-1 bg-primary/10 text-primary text-xs rounded-lg border border-primary/20">Spring Boot</span>
+                    <span className="px-2.5 py-1 bg-secondary/10 text-secondary text-xs rounded-lg border border-secondary/20">React</span>
+                    <span className="px-2.5 py-1 bg-tertiary/10 text-tertiary text-xs rounded-lg border border-tertiary/20">Node.js</span>
+                    <span className="px-2.5 py-1 bg-white/5 text-white/60 text-xs rounded-lg border border-white/10">Angular</span>
+                    <span className="px-2.5 py-1 bg-white/5 text-white/60 text-xs rounded-lg border border-white/10">TypeScript</span>
+                  </div>
+
+                  <a href="https://dewiyatech.com" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-secondary text-sm hover:text-secondary/80 transition-colors group">
+                    Visiter le site
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
