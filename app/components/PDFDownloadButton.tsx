@@ -25,7 +25,7 @@ export default function PDFDownloadButton() {
     return (
       <button
         disabled
-        className="inline-flex items-center justify-center gap-2 bg-card-2 text-white/50 px-8 py-4 rounded-lg font-semibold border border-white/20 cursor-not-allowed"
+        className="inline-flex items-center justify-center gap-2 bg-card-2 text-text/50 px-8 py-4 rounded-lg font-semibold border border-darkGray cursor-not-allowed"
       >
         <Download className="w-5 h-5" />
         Préparation...
@@ -37,7 +37,7 @@ export default function PDFDownloadButton() {
     <PDFDownloadLink
       document={<CVDocument />}
       fileName="CV_Jean-Luc_Kashindi_Nestor.pdf"
-      className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/5 transition-all"
+      className="inline-flex items-center justify-center gap-2 bg-card-2 text-text px-8 py-4 rounded-lg font-semibold border border-darkGray hover:bg-darkBlue transition-all"
     >
       {({ loading }: { loading: boolean }) => (
         <>

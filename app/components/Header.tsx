@@ -45,6 +45,13 @@ export default function Header() {
     }
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const isActive = (href?: string) => {
     if (!href) return false;
     return pathname === href;
@@ -126,11 +133,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-card-2/95 backdrop-blur-sm border-b border-white/5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-card-2/95 backdrop-blur-sm border-b border-darkGray">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between h-14 px-8">
+          <div className="flex items-center justify-between h-14 px-4 sm:px-8">
           {/* Logo */}
-          <Link href="/" className="text-lg font-medium text-white tracking-tight">
+          <Link href="/" className="text-lg font-medium text-text tracking-tight">
             Portfolio
           </Link>
 
@@ -146,8 +153,8 @@ export default function Header() {
                 {item.items ? (
                   <button className={`flex items-center gap-2 text-sm transition-colors py-2 px-3 rounded-md border cursor-pointer ${
                     activeMenu === item.title 
-                      ? 'text-white border-white/20 bg-white/10' 
-                      : 'text-white/70 hover:text-white border-transparent hover:border-white/10 hover:bg-white/5'
+                      ? 'text-text border-darkGray bg-darkBlue' 
+                      : 'text-text/70 hover:text-text border-transparent hover:border-darkGray hover:bg-darkBlue'
                   }`}>
                     <item.icon className="w-4 h-4" />
                     <span>{item.title}</span>
@@ -158,8 +165,8 @@ export default function Header() {
                     onClick={() => handleMenuClick(item.href!)}
                     className={`flex items-center gap-2 text-sm transition-colors py-2 px-3 rounded-md border cursor-pointer ${
                       isActive(item.href)
-                        ? 'text-white border-white/20 bg-white/10'
-                        : 'text-white/70 hover:text-white border-transparent hover:border-white/10 hover:bg-white/5'
+                        ? 'text-text border-darkGray bg-darkBlue'
+                        : 'text-text/70 hover:text-text border-transparent hover:border-darkGray hover:bg-darkBlue'
                     }`}
                   >
                     {loadingButton === item.href ? (
@@ -196,14 +203,14 @@ export default function Header() {
                 {/* Mega Menu */}
                 {item.items && activeMenu === item.title && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pt-2">
-                    <div className="bg-card-2 border border-white/10 rounded-lg shadow-2xl overflow-hidden min-w-[380px]">
+                    <div className="bg-card-2 border border-darkGray rounded-lg shadow-2xl overflow-hidden min-w-[380px]">
                       {/* Menu Header */}
-                      <div className="px-6 py-4 bg-white/5 border-b border-white/5">
-                        <div className="flex items-center gap-2.5 text-white mb-1.5">
+                      <div className="px-6 py-4 bg-darkBlue border-b border-darkGray">
+                        <div className="flex items-center gap-2.5 text-text mb-1.5">
                           <item.icon className="w-5 h-5" />
                           <span className="font-semibold text-base">{item.title}</span>
                         </div>
-                        <p className="text-xs text-white/50 leading-relaxed">{item.description}</p>
+                        <p className="text-xs text-text/50 leading-relaxed">{item.description}</p>
                       </div>
                       
                       {/* Menu Items Grid */}
@@ -215,10 +222,10 @@ export default function Header() {
                               key={subItem.title}
                               href={subItem.href}
                               onClick={() => handleMenuClick(subItem.href)}
-                              className="flex items-start gap-3.5 px-3 py-3 rounded-md text-white/60 hover:text-white hover:bg-white/5 transition-all group"
+                              className="flex items-start gap-3.5 px-3 py-3 rounded-md text-text/60 hover:text-text hover:bg-darkBlue transition-all group"
                             >
                               {loadingButton === subItem.href ? (
-                                <div className="mt-0.5 p-2 rounded-md bg-white/5">
+                                <div className="mt-0.5 p-2 rounded-md bg-darkBlue">
                                   <div className="spinner-container relative" style={{ width: '16px', height: '16px' }}>
                                     {[...Array(8)].map((_, i) => (
                                       <div
@@ -242,13 +249,13 @@ export default function Header() {
                                   </div>
                                 </div>
                               ) : (
-                                <div className="mt-0.5 p-2 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
+                                <div className="mt-0.5 p-2 rounded-md bg-darkBlue group-hover:bg-darkBlue transition-colors">
                                   <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                                 </div>
                               )}
                               <div className="flex-1 min-w-0">
                                 <div className="text-sm font-medium mb-0.5">{subItem.title}</div>
-                                <div className="text-xs text-white/40 leading-relaxed">{subItem.description}</div>
+                                <div className="text-xs text-text/40 leading-relaxed">{subItem.description}</div>
                               </div>
                             </Link>
                           );
@@ -264,7 +271,7 @@ export default function Header() {
           {/* CTA */}
           <Link
             href="/backoffice"
-            className="hidden lg:flex items-center gap-2 bg-white text-black px-5 py-1.5 text-sm rounded-sm hover:bg-white/90 transition-colors"
+            className="hidden lg:flex items-center gap-2 bg-primary text-background px-5 py-1.5 text-sm rounded-sm hover:bg-darkBlue transition-colors"
           >
             <Settings className="w-4 h-4" />
             <span>Backoffice</span>
@@ -273,10 +280,11 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => {
-              console.log('Menu clicked:', !mobileMenuOpen);
               setMobileMenuOpen(!mobileMenuOpen);
             }}
-            className="lg:hidden text-white z-50"
+            aria-label={mobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-expanded={mobileMenuOpen}
+            className="lg:hidden text-text z-50 w-10 h-10 inline-flex items-center justify-center rounded-lg border border-darkGray bg-darkBlue"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -292,10 +300,124 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-x-0 top-14 bottom-0 z-40 bg-background border-t border-darkGray overflow-y-auto">
+          <div className="px-4 py-4">
+            <div className="mb-4">
+              <div className="text-xs font-semibold text-text/50 uppercase tracking-wide mb-2">Navigation</div>
+              <div className="divide-y divide-darkGray border-y border-darkGray">
+                {menuItems.map((item) => {
+                  const Icon = item.icon;
+                  const active = item.href ? isActive(item.href) : item.items?.some((subItem) => isActive(subItem.href));
+
+                  if (!item.items) {
+                    return (
+                      <Link
+                        key={item.title}
+                        href={item.href!}
+                        onClick={() => handleMenuClick(item.href!)}
+                        className={`flex items-center gap-3 px-1 py-4 text-sm font-medium transition-colors ${
+                          active ? 'text-primary' : 'text-text/75'
+                        }`}
+                      >
+                        <Icon className="w-4 h-4" />
+                        <span>{item.title}</span>
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <button
+                      key={item.title}
+                      onClick={() => setMobileSubmenuOpen(mobileSubmenuOpen === item.title ? null : item.title)}
+                      className={`flex w-full items-center justify-between gap-3 px-1 py-4 text-left text-sm font-medium transition-colors ${
+                        active || mobileSubmenuOpen === item.title ? 'text-primary' : 'text-text/75'
+                      }`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <Icon className="w-4 h-4" />
+                        <span>{item.title}</span>
+                      </span>
+                      <svg
+                        className={`w-4 h-4 flex-shrink-0 transition-transform ${mobileSubmenuOpen === item.title ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  );
+                })}
+                <Link
+                  href="/backoffice"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center gap-3 px-1 py-4 text-sm font-medium transition-colors ${
+                    isActive('/backoffice') ? 'text-primary' : 'text-text/75'
+                  }`}
+                >
+                  <Settings className="w-4 h-4" />
+                  <span>Backoffice</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-darkGray bg-card-2 p-3">
+              {menuItems
+                .filter((item) => item.items && item.title === mobileSubmenuOpen)
+                .map((item) => (
+                  <div key={item.title}>
+                    <div className="flex items-center gap-2 px-2 pb-3 text-text">
+                      <item.icon className="w-5 h-5 text-primary" />
+                      <div>
+                        <div className="text-sm font-semibold">{item.title}</div>
+                        <div className="text-xs text-text/50">{item.description}</div>
+                      </div>
+                    </div>
+                    <div className="grid gap-2">
+                      {item.items!.map((subItem) => {
+                        const Icon = subItem.icon;
+                        return (
+                          <Link
+                            key={subItem.title}
+                            href={subItem.href}
+                            onClick={() => handleMenuClick(subItem.href)}
+                            className={`flex items-center gap-3 rounded-lg border px-3 py-3 transition-colors ${
+                              isActive(subItem.href)
+                                ? 'bg-darkBlue border-primary/40 text-text'
+                                : 'bg-background border-darkGray text-text/70'
+                            }`}
+                          >
+                            <div className="w-9 h-9 rounded-md bg-darkBlue flex items-center justify-center flex-shrink-0">
+                              <Icon className="w-4 h-4" />
+                            </div>
+                            <div className="min-w-0">
+                              <div className="text-sm font-medium">{subItem.title}</div>
+                              <div className="text-xs text-text/40 truncate">{subItem.description}</div>
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+
+              {!mobileSubmenuOpen && (
+                <div className="px-2 py-6 text-center">
+                  <div className="text-sm font-semibold text-text mb-1">Choisissez une rubrique</div>
+                  <p className="text-xs text-text/50">Les pages du menu apparaissent ici.</p>
+                </div>
+              )}
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {false && mobileMenuOpen && (
         <>
           {/* Overlay */}
           <div 
-            className="lg:hidden fixed inset-0 bg-black/50 z-40"
+            className="lg:hidden fixed inset-0 bg-background/80 z-40"
             onClick={() => setMobileMenuOpen(false)}
           />
           
@@ -306,7 +428,7 @@ export default function Header() {
               <div className="flex justify-end mb-4">
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-white p-2"
+                  className="text-text p-2"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -315,12 +437,12 @@ export default function Header() {
               </div>
 
               {menuItems.map((item) => (
-                <div key={item.title} className="border-b border-white/5 pb-2">
+                <div key={item.title} className="border-b border-darkGray pb-2">
                   {item.items ? (
                     <>
                       <button
                         onClick={() => setMobileSubmenuOpen(mobileSubmenuOpen === item.title ? null : item.title)}
-                        className="flex items-center justify-between w-full py-3 text-white hover:text-white/80 transition-colors"
+                        className="flex items-center justify-between w-full py-3 text-text hover:text-text/80 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <item.icon className="w-5 h-5" />
@@ -342,7 +464,7 @@ export default function Header() {
                           mobileSubmenuOpen === item.title ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                       >
-                        <div className="pl-8 pr-4 py-2 space-y-1 bg-white/5 rounded-lg mt-2">
+                        <div className="pl-8 pr-4 py-2 space-y-1 bg-darkBlue rounded-lg mt-2">
                           {item.items.map((subItem) => {
                             const Icon = subItem.icon;
                             return (
@@ -350,10 +472,10 @@ export default function Header() {
                                 key={subItem.title}
                                 href={subItem.href}
                                 onClick={() => handleMenuClick(subItem.href)}
-                                className="flex items-start gap-3 py-3 text-white/60 hover:text-white transition-colors group"
+                                className="flex items-start gap-3 py-3 text-text/60 hover:text-text transition-colors group"
                               >
                                 {loadingButton === subItem.href ? (
-                                  <div className="mt-0.5 p-1.5 rounded-md bg-white/5">
+                                  <div className="mt-0.5 p-1.5 rounded-md bg-darkBlue">
                                     <div className="spinner-container relative" style={{ width: '16px', height: '16px' }}>
                                       {[...Array(8)].map((_, i) => (
                                         <div
@@ -377,13 +499,13 @@ export default function Header() {
                                     </div>
                                   </div>
                                 ) : (
-                                  <div className="mt-0.5 p-1.5 rounded-md bg-white/5 group-hover:bg-white/10 transition-colors">
+                                  <div className="mt-0.5 p-1.5 rounded-md bg-darkBlue group-hover:bg-darkBlue transition-colors">
                                     <Icon className="w-4 h-4" />
                                   </div>
                                 )}
                                 <div className="flex-1">
                                   <div className="text-sm font-medium mb-0.5">{subItem.title}</div>
-                                  <div className="text-xs text-white/40">{subItem.description}</div>
+                                  <div className="text-xs text-text/40">{subItem.description}</div>
                                 </div>
                               </Link>
                             );
@@ -396,7 +518,7 @@ export default function Header() {
                       href={item.href!}
                       onClick={() => handleMenuClick(item.href!)}
                       className={`flex items-center gap-3 py-3 transition-colors ${
-                        isActive(item.href) ? 'text-white' : 'text-white/70 hover:text-white'
+                        isActive(item.href) ? 'text-text' : 'text-text/70 hover:text-text'
                       }`}
                     >
                       {loadingButton === item.href ? (
@@ -436,7 +558,7 @@ export default function Header() {
               <Link
                 href="/backoffice"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 mt-6 bg-white text-black px-6 py-3 text-sm font-medium rounded-lg hover:bg-white/90 transition-colors"
+                className="flex items-center justify-center gap-2 mt-6 bg-primary text-background px-6 py-3 text-sm font-medium rounded-lg hover:bg-darkBlue transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span>Backoffice</span>

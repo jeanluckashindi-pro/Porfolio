@@ -54,10 +54,10 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
           <div className="flex flex-col items-center justify-center h-full gap-6 p-8 text-center">
             <Smartphone className="w-16 h-16 text-primary opacity-60" />
             <div>
-              <p className="text-white text-lg font-semibold mb-2">
+              <p className="text-text text-lg font-semibold mb-2">
                 Prévisualisation non disponible sur mobile
               </p>
-              <p className="text-white/60 text-sm">
+              <p className="text-text/60 text-sm">
                 Les navigateurs mobiles ne supportent pas l&apos;affichage PDF intégré. Téléchargez le CV pour le consulter.
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
               <PDFDownloadLink
                 document={<CVDocument />}
                 fileName="CV_Jean-Luc_Kashindi_Nestor.pdf"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-text px-8 py-4 rounded-lg font-semibold hover:bg-darkBlue transition-all"
               >
                 {({ loading }: { loading: boolean }) => (
                   <>
@@ -77,7 +77,7 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
             ) : (
               <button
                 disabled
-                className="inline-flex items-center justify-center gap-2 bg-primary/50 text-white px-8 py-4 rounded-lg font-semibold cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-2 bg-darkBlue text-text px-8 py-4 rounded-lg font-semibold cursor-not-allowed"
               >
                 <Download className="w-5 h-5" />
                 Préparation...
@@ -89,7 +89,7 @@ export default function PDFViewerDialog({ visible, onHide }: PDFViewerDialogProp
             <CVDocument />
           </PDFViewer>
         ) : (
-          <div className="flex items-center justify-center h-full text-white">
+          <div className="flex items-center justify-center h-full text-text">
             Chargement du PDF...
           </div>
         )}

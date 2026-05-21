@@ -45,7 +45,7 @@ export function ExperienceChart() {
         pointRadius: 6,
         pointHoverRadius: 8,
         pointBackgroundColor: 'rgba(255, 255, 255, 0.9)',
-        pointBorderColor: '#131313',
+        pointBorderColor: '#00070F',
         pointBorderWidth: 2,
       },
       {
@@ -58,7 +58,7 @@ export function ExperienceChart() {
         pointRadius: 6,
         pointHoverRadius: 8,
         pointBackgroundColor: 'rgba(255, 255, 255, 0.7)',
-        pointBorderColor: '#131313',
+        pointBorderColor: '#00070F',
         pointBorderWidth: 2,
       },
     ],
@@ -72,7 +72,7 @@ export function ExperienceChart() {
         display: true,
         position: 'top' as const,
         labels: {
-          color: '#e8eaed',
+          color: '#F9F9F9',
           font: {
             size: 12,
           },
@@ -81,10 +81,10 @@ export function ExperienceChart() {
         },
       },
       tooltip: {
-        backgroundColor: '#1c1c1c',
-        titleColor: '#e8eaed',
-        bodyColor: '#9aa0a6',
-        borderColor: 'rgba(255, 255, 255, 0.3)',
+        backgroundColor: '#181F27',
+        titleColor: '#F9F9F9',
+        bodyColor: '#F1F5F9',
+        borderColor: '#343A40',
         borderWidth: 1,
         padding: 12,
         displayColors: true,
@@ -97,7 +97,7 @@ export function ExperienceChart() {
           color: 'rgba(255, 255, 255, 0.05)',
         },
         ticks: {
-          color: '#9aa0a6',
+          color: '#F1F5F9',
           font: {
             size: 11,
           },
@@ -108,7 +108,7 @@ export function ExperienceChart() {
           color: 'rgba(255, 255, 255, 0.05)',
         },
         ticks: {
-          color: '#9aa0a6',
+          color: '#F1F5F9',
           font: {
             size: 11,
           },
@@ -144,10 +144,10 @@ export function TechStackChart() {
         display: false,
       },
       tooltip: {
-        backgroundColor: '#1c1c1c',
-        titleColor: '#e8eaed',
-        bodyColor: '#9aa0a6',
-        borderColor: 'rgba(138, 180, 248, 0.3)',
+        backgroundColor: '#181F27',
+        titleColor: '#F9F9F9',
+        bodyColor: '#F1F5F9',
+        borderColor: '#1877F2',
         borderWidth: 1,
         padding: 12,
         callbacks: {
@@ -165,7 +165,7 @@ export function TechStackChart() {
           color: 'rgba(255, 255, 255, 0.05)',
         },
         ticks: {
-          color: '#9aa0a6',
+          color: '#F1F5F9',
           font: {
             size: 11,
           },
@@ -179,7 +179,7 @@ export function TechStackChart() {
           display: false,
         },
         ticks: {
-          color: '#e8eaed',
+          color: '#F9F9F9',
           font: {
             size: 12,
           },
@@ -205,7 +205,7 @@ export function ProjectsTimelineChart() {
         pointRadius: 4,
         pointHoverRadius: 6,
         pointBackgroundColor: 'rgba(255, 255, 255, 0.9)',
-        pointBorderColor: '#131313',
+        pointBorderColor: '#00070F',
         pointBorderWidth: 2,
       },
     ],
@@ -219,10 +219,10 @@ export function ProjectsTimelineChart() {
         display: false,
       },
       tooltip: {
-        backgroundColor: '#1c1c1c',
-        titleColor: '#e8eaed',
-        bodyColor: '#9aa0a6',
-        borderColor: 'rgba(255, 255, 255, 0.3)',
+        backgroundColor: '#181F27',
+        titleColor: '#F9F9F9',
+        bodyColor: '#F1F5F9',
+        borderColor: '#343A40',
         borderWidth: 1,
         padding: 12,
         callbacks: {
@@ -239,7 +239,7 @@ export function ProjectsTimelineChart() {
           color: 'rgba(255, 255, 255, 0.05)',
         },
         ticks: {
-          color: '#9aa0a6',
+          color: '#F1F5F9',
           font: {
             size: 11,
           },
@@ -250,7 +250,7 @@ export function ProjectsTimelineChart() {
           display: false,
         },
         ticks: {
-          color: '#9aa0a6',
+          color: '#F1F5F9',
           font: {
             size: 11,
           },
@@ -291,7 +291,7 @@ export function SkillsDonutChart() {
         display: true,
         position: 'right' as const,
         labels: {
-          color: '#e8eaed',
+          color: '#F9F9F9',
           font: {
             size: 12,
           },
@@ -301,10 +301,10 @@ export function SkillsDonutChart() {
         },
       },
       tooltip: {
-        backgroundColor: '#1c1c1c',
-        titleColor: '#e8eaed',
-        bodyColor: '#9aa0a6',
-        borderColor: 'rgba(138, 180, 248, 0.3)',
+        backgroundColor: '#181F27',
+        titleColor: '#F9F9F9',
+        bodyColor: '#F1F5F9',
+        borderColor: '#1877F2',
         borderWidth: 1,
         padding: 12,
         callbacks: {

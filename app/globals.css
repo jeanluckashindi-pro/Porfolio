@@ -1,25 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  /* Google Dark Mode - Couleurs officielles */
-  --background: #131313;
-  --surface: #1c1c1c;
-  --on-surface: #e8eaed;
-  --on-surface-variant: #9aa0a6;
-  
-  /* Les deux couleurs de fond Google */
-  --card-1: #131313;
-  --card-2: #1c1c1c;
-  
-  /* Couleurs d'accent Google */
-  --primary: #8ab4f8;
-  --secondary: #81c995;
-  --tertiary: #fdd663;
-  --error: #f28b82;
+  --primary: #1877F2;
+  --secondary: #F58424;
+  --text: #F9F9F9;
+  --light-gray: #F8F9FA;
+  --background: #00070F;
+  --card: #181F27;
+  --dark-blue: #000C18;
+  --dark-gray: #343A40;
+  --gradient-end: #0E5FCC;
+
+  --status-normal: #56F000;
+  --status-critical: #FF3838;
+  --status-caution: #FCE83A;
+  --status-serious: #FFB302;
+
+  --subscription-residential: #F58424;
+  --subscription-roam: #4CAF50;
+  --subscription-business: #3F51B5;
+  --subscription-maritime: #FF9800;
+  --subscription-aviation: #9C27B0;
+
+  --plan-basic: #F58424;
+  --plan-standard: #4CAF50;
+  --plan-premium: #3F51B5;
+
+  --surface: var(--card);
+  --on-surface: var(--text);
+  --on-surface-variant: #F1F5F9;
+  --card-1: var(--background);
+  --card-2: var(--card);
+  --tertiary: var(--secondary);
+  --error: var(--status-critical);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-text: var(--text);
+  --color-lightGray: var(--light-gray);
+  --color-card: var(--card);
+  --color-darkBlue: var(--dark-blue);
+  --color-darkGray: var(--dark-gray);
   --color-surface: var(--surface);
   --color-on-surface: var(--on-surface);
   --color-on-surface-variant: var(--on-surface-variant);
@@ -29,17 +51,131 @@
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
   --color-error: var(--error);
-  --font-sans: var(--font-open-sans);
-  --font-anton: var(--font-anton);
-  --font-antonio: var(--font-antonio);
-  --font-kaushan: var(--font-kaushan-script);
-  --font-ubuntu: var(--font-ubuntu);
+  --color-status-normal: var(--status-normal);
+  --color-status-critical: var(--status-critical);
+  --color-status-caution: var(--status-caution);
+  --color-status-serious: var(--status-serious);
+  --color-residential: var(--subscription-residential);
+  --color-roam: var(--subscription-roam);
+  --color-business: var(--subscription-business);
+  --color-maritime: var(--subscription-maritime);
+  --color-aviation: var(--subscription-aviation);
+  --color-basic: var(--plan-basic);
+  --color-standard: var(--plan-standard);
+  --color-premium: var(--plan-premium);
+  --background-image-grd-linear: linear-gradient(to bottom, #1877F2 0%, #0E5FCC 100%);
+  --font-sans: var(--font-open-sans), sans-serif;
+  --font-body: var(--font-open-sans), sans-serif;
+  --font-heading: var(--font-josefin-sans), sans-serif;
 }
 
 body {
-  background: var(--card-1);
-  color: var(--on-surface);
+  background: var(--background);
+  color: var(--text);
   font-family: var(--font-open-sans), sans-serif;
+}
+
+main > section {
+  background: var(--background) !important;
+}
+
+main > section > .absolute.inset-0 {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-josefin-sans), sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  color: var(--text);
+}
+
+* {
+  scrollbar-color: var(--primary) var(--dark-blue);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #1877F2 0%, #0E5FCC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+button[class*="bg-primary"],
+a[class*="bg-primary"] {
+  min-height: 44px;
+  padding-inline: 24px;
+  border-radius: 9999px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text) !important;
+  font-weight: 600;
+}
+
+button[class*="bg-card-2"][class*="px-"],
+a[class*="bg-card-2"][class*="px-"],
+button[class*="bg-darkBlue"][class*="px-"],
+a[class*="bg-darkBlue"][class*="px-"] {
+  min-height: 44px;
+  border-radius: 9999px !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #1E293B;
+  color: #F1F5F9;
+  border-color: #334155;
+  padding: 1rem;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background: #0F172A;
+  color: #F1F5F9;
+}
+
+.p-datatable .p-datatable-tbody > tr:nth-child(even) {
+  background: #1E293B;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #334155;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  border-color: #334155;
+  padding: 1rem;
+}
+
+@media (max-width: 640px) {
+  .p-datatable .p-datatable-thead > tr > th,
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem;
+    font-size: 12px;
+  }
 }
 
 /* Animation Spine Spoke pour les boutons */

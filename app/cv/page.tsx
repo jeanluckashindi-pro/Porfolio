@@ -17,7 +17,7 @@ export default function CVPage() {
       <main className="pt-16 min-h-screen bg-card-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-card-2 to-card-1 py-16 sm:py-24">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(24,31,39,0.1),transparent_50%)]"></div>
           
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-12">
@@ -35,7 +35,7 @@ export default function CVPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
                 onClick={() => setShowPDFDialog(true)}
-                className="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-background px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105"
               >
                 <Eye className="w-5 h-5" />
                 Visualiser le PDF
@@ -91,19 +91,19 @@ export default function CVPage() {
                   Points Forts
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-white/5 rounded-lg p-4">
+                  <div className="bg-darkBlue rounded-lg p-4">
                     <div className="text-3xl font-bold text-primary mb-1">3+</div>
                     <div className="text-sm text-white/60">Ans d'expérience</div>
                   </div>
-                  <div className="bg-white/5 rounded-lg p-4">
+                  <div className="bg-darkBlue rounded-lg p-4">
                     <div className="text-3xl font-bold text-secondary mb-1">15+</div>
                     <div className="text-sm text-white/60">Projets livrés</div>
                   </div>
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-3xl font-bold text-tertiary mb-1">12+</div>
+                  <div className="bg-darkBlue rounded-lg p-4">
+                    <div className="text-3xl font-bold text-secondary mb-1">12+</div>
                     <div className="text-sm text-white/60">Technologies</div>
                   </div>
-                  <div className="bg-white/5 rounded-lg p-4">
+                  <div className="bg-darkBlue rounded-lg p-4">
                     <div className="text-3xl font-bold text-white mb-1">100%</div>
                     <div className="text-sm text-white/60">Satisfaction</div>
                   </div>
@@ -113,22 +113,35 @@ export default function CVPage() {
               {/* Compétences Clés */}
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Code className="w-5 h-5 text-tertiary" />
+                  <Code className="w-5 h-5 text-secondary" />
                   Compétences Clés
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-[5px] border border-primary/30">Spring Boot</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-[5px] border border-primary/30">React</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-[5px] border border-primary/30">Node.js</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-[5px] border border-secondary/30">Angular</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-[5px] border border-secondary/30">TypeScript</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-[5px] border border-secondary/30">Python</span>
-                  <span className="px-3 py-1 bg-tertiary/10 text-tertiary text-sm rounded-[5px] border border-tertiary/30">Docker</span>
-                  <span className="px-3 py-1 bg-tertiary/10 text-tertiary text-sm rounded-[5px] border border-tertiary/30">Kubernetes</span>
-                  <span className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded-[5px] border border-white/20">PostgreSQL</span>
-                  <span className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded-[5px] border border-white/20">MongoDB</span>
-                  <span className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded-[5px] border border-white/20">Microservices</span>
-                  <span className="px-3 py-1 bg-white/10 text-white/70 text-sm rounded-[5px] border border-white/20">REST APIs</span>
+                  <span className="px-3 py-1 bg-darkBlue text-primary text-sm rounded-[5px] border border-primary/30">Spring Boot</span>
+                  <span className="px-3 py-1 bg-darkBlue text-primary text-sm rounded-[5px] border border-primary/30">React</span>
+                  <span className="px-3 py-1 bg-darkBlue text-primary text-sm rounded-[5px] border border-primary/30">Node.js</span>
+                  <span className="px-3 py-1 bg-darkBlue text-secondary text-sm rounded-[5px] border border-secondary/30">Angular</span>
+                  <span className="px-3 py-1 bg-darkBlue text-secondary text-sm rounded-[5px] border border-secondary/30">TypeScript</span>
+                  <span className="px-3 py-1 bg-darkBlue text-secondary text-sm rounded-[5px] border border-secondary/30">Python</span>
+                  <span className="px-3 py-1 bg-darkBlue text-secondary text-sm rounded-[5px] border border-secondary/30">Docker</span>
+                  <span className="px-3 py-1 bg-darkBlue text-secondary text-sm rounded-[5px] border border-secondary/30">Kubernetes</span>
+                  <span className="px-3 py-1 bg-darkBlue text-text/70 text-sm rounded-[5px] border border-darkGray">PostgreSQL</span>
+                  <span className="px-3 py-1 bg-darkBlue text-text/70 text-sm rounded-[5px] border border-darkGray">MongoDB</span>
+                  <span className="px-3 py-1 bg-darkBlue text-text/70 text-sm rounded-[5px] border border-darkGray">Microservices</span>
+                  <span className="px-3 py-1 bg-darkBlue text-text/70 text-sm rounded-[5px] border border-darkGray">REST APIs</span>
+                </div>
+              </div>
+
+              {/* Formation */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <Award className="w-5 h-5 text-primary" />
+                  Formation
+                </h3>
+                <div className="bg-darkBlue rounded-lg p-4 border border-darkGray">
+                  <div className="text-sm font-semibold text-text mb-1">Master en Génie Logiciel</div>
+                  <div className="text-sm text-text/70">Université des Grands Lacs de Bujumbura</div>
+                  <div className="text-xs text-text/50 mt-1">2026 - En cours · Spécialisation en Génie Logiciel</div>
                 </div>
               </div>
 
@@ -140,7 +153,7 @@ export default function CVPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => setShowPDFDialog(true)}
-                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-text px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all"
                   >
                     <Eye className="w-5 h-5" />
                     Visualiser le PDF complet

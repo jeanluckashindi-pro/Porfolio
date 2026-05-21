@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Anton, Antonio, Kaushan_Script, Ubuntu } from "next/font/google";
+import { Josefin_Sans, Open_Sans } from "next/font/google";
 import "./globals.css";
 import "primereact/resources/themes/lara-dark-blue/theme.css";
 import "primereact/resources/primereact.min.css";
@@ -14,28 +14,10 @@ const openSans = Open_Sans({
   style: ["normal", "italic"],
 });
 
-const anton = Anton({
-  variable: "--font-anton",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const antonio = Antonio({
-  variable: "--font-antonio",
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
-});
-
-const kaushanScript = Kaushan_Script({
-  variable: "--font-kaushan-script",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-const ubuntu = Ubuntu({
-  variable: "--font-ubuntu",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
   style: ["normal", "italic"],
 });
 
@@ -50,9 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
-        className={`${openSans.variable} ${anton.variable} ${antonio.variable} ${kaushanScript.variable} ${ubuntu.variable} antialiased`}
+        className={`${openSans.variable} ${josefinSans.variable} antialiased`}
       >
         <LoadingBar />
         {children}

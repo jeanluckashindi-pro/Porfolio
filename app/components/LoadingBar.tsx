@@ -46,7 +46,7 @@ export default function LoadingBar() {
         className="h-full bg-primary transition-all duration-300 ease-out"
         style={{
           width: `${progress}%`,
-          boxShadow: '0 0 10px rgba(138, 180, 248, 0.5)',
+          boxShadow: '0 0 10px rgba(24, 119, 242, 0.5)',
         }}
       />
     </div>

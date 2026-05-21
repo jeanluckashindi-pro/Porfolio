@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   nameSection: {
     marginBottom: 15,
     textAlign: 'center',
-    borderBottom: '2 solid #8ab4f8',
+    borderBottom: '2 solid #1877F2',
     paddingBottom: 10,
   },
   name: {
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 12,
-    color: '#8ab4f8',
+    color: '#1877F2',
     fontFamily: 'Helvetica-Bold',
     marginBottom: 8,
   },
@@ -398,6 +398,8 @@ export function CVDocument() {
           {/* Formation */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>FORMATION</Text>
+            <Text style={styles.simpleItem}>Master en Génie Logiciel — Université des Grands Lacs de Bujumbura, 2026 - en cours</Text>
+            <Text style={styles.simpleItem}>Spécialisation : Génie Logiciel</Text>
             <Text style={styles.simpleItem}>Baccalauréat en Génie Logiciel — Bujumbura International University (BIU), Burundi</Text>
           </View>
           

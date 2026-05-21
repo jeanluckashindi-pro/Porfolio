@@ -9,7 +9,7 @@ export default function ProjetsPersonnelsPage() {
       <main className="pt-16 min-h-screen bg-card-1">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-card-2 to-card-1 py-16 sm:py-24">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(138,180,248,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(24,31,39,0.1),transparent_50%)]"></div>
           
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-12">
@@ -30,11 +30,11 @@ export default function ProjetsPersonnelsPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-12">
               {/* Ufaranga - Featured Project */}
-              <div className="bg-gradient-to-br from-primary/10 via-card-2 to-card-2 border border-primary/30 rounded-xl overflow-hidden">
+              <div className="bg-gradient-to-br from-card-2 via-card-2 to-card-2 border border-primary/30 rounded-xl overflow-hidden">
                 <div className="p-6 sm:p-8">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 bg-gradient-to-br from-primary/40 to-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <div className="w-14 h-14 bg-gradient-to-br from-darkBlue to-card-2 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Smartphone className="w-7 h-7 text-primary" />
                       </div>
                       <div>
@@ -48,7 +48,7 @@ export default function ProjetsPersonnelsPage() {
                     </div>
                   </div>
 
-                  <div className="bg-white/5 rounded-lg p-4 mb-6">
+                  <div className="bg-darkBlue rounded-lg p-4 mb-6">
                     <p className="text-sm text-white/70 leading-relaxed">
                       <span className="font-semibold text-white">Vision du projet :</span> Moderniser les transactions dans les transports en commun 
                       en Afrique en proposant une solution de paiement sans contact simple, rapide et sécurisée.
@@ -102,7 +102,7 @@ export default function ProjetsPersonnelsPage() {
                   <div className="mb-6">
                     <h3 className="text-lg font-bold text-white mb-4">Stack Technique</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="bg-white/5 rounded-lg p-4">
+                      <div className="bg-darkBlue rounded-lg p-4">
                         <h4 className="text-sm font-semibold text-white mb-3">Backend Services</h4>
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
@@ -120,7 +120,7 @@ export default function ProjetsPersonnelsPage() {
                         </div>
                       </div>
 
-                      <div className="bg-white/5 rounded-lg p-4">
+                      <div className="bg-darkBlue rounded-lg p-4">
                         <h4 className="text-sm font-semibold text-white mb-3">Frontend & Mobile</h4>
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
@@ -138,19 +138,19 @@ export default function ProjetsPersonnelsPage() {
                         </div>
                       </div>
 
-                      <div className="bg-white/5 rounded-lg p-4">
+                      <div className="bg-darkBlue rounded-lg p-4">
                         <h4 className="text-sm font-semibold text-white mb-3">Infrastructure</h4>
                         <div className="space-y-2">
                           <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-tertiary rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
                             <span className="text-xs text-white/70">Docker / Kubernetes</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-tertiary rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
                             <span className="text-xs text-white/70">PostgreSQL / Redis</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-tertiary rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
                             <span className="text-xs text-white/70">CI/CD Pipeline</span>
                           </div>
                         </div>
@@ -158,7 +158,7 @@ export default function ProjetsPersonnelsPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-primary/10 to-transparent border-l-4 border-primary rounded-lg p-4 mb-6">
+                  <div className="bg-gradient-to-r from-darkBlue to-transparent border-l-4 border-primary rounded-lg p-4 mb-6">
                     <p className="text-sm text-white/70">
                       <span className="font-semibold text-white">💡 Objectif :</span> Ce projet me permet d'expérimenter avec des architectures 
                       complexes et de démontrer ma capacité à concevoir des systèmes complets de A à Z. Il est disponible pour démonstration 
@@ -167,13 +167,13 @@ export default function ProjetsPersonnelsPage() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all">
+                    <button className="inline-flex items-center justify-center gap-2 bg-primary text-background px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">
                       <Github className="w-5 h-5" />
                       Voir le code (privé)
                     </button>
                     <Link 
                       href="/contact" 
-                      className="inline-flex items-center justify-center gap-2 bg-card-2 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/5 transition-all"
+                      className="inline-flex items-center justify-center gap-2 bg-card-2 text-text px-6 py-3 rounded-lg font-semibold border border-darkGray hover:bg-darkBlue transition-all"
                     >
                       Demander une démo
                     </Link>
@@ -185,7 +185,7 @@ export default function ProjetsPersonnelsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-card-2 border border-white/10 rounded-xl p-6 hover:border-secondary/30 transition-all">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-darkBlue rounded-lg flex items-center justify-center flex-shrink-0">
                       <Code className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
@@ -198,9 +198,9 @@ export default function ProjetsPersonnelsPage() {
                     pour présenter mon parcours et mes compétences de manière professionnelle.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-[5px]">Next.js</span>
-                    <span className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-[5px]">TypeScript</span>
-                    <span className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-[5px]">Tailwind CSS</span>
+                    <span className="px-2 py-1 bg-darkBlue text-secondary text-xs rounded-[5px]">Next.js</span>
+                    <span className="px-2 py-1 bg-darkBlue text-secondary text-xs rounded-[5px]">TypeScript</span>
+                    <span className="px-2 py-1 bg-darkBlue text-secondary text-xs rounded-[5px]">Tailwind CSS</span>
                   </div>
                   <a href="https://github.com/jeanluckashindi-pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors text-sm">
                     <Github className="w-4 h-4" />
@@ -208,14 +208,14 @@ export default function ProjetsPersonnelsPage() {
                   </a>
                 </div>
 
-                <div className="bg-card-2 border border-white/10 rounded-xl p-6 hover:border-tertiary/30 transition-all">
+                <div className="bg-card-2 border border-white/10 rounded-xl p-6 hover:border-secondary/30 transition-all">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-tertiary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-tertiary" />
+                    <div className="w-12 h-12 bg-darkBlue rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">Projets Open Source</h3>
-                      <p className="text-sm text-tertiary">Contributions communautaires</p>
+                      <p className="text-sm text-secondary">Contributions communautaires</p>
                     </div>
                   </div>
                   <p className="text-sm text-white/70 leading-relaxed mb-4">
@@ -223,10 +223,10 @@ export default function ProjetsPersonnelsPage() {
                     sur GitHub pour aider la communauté des développeurs.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-2 py-1 bg-tertiary/10 text-tertiary text-xs rounded-[5px]">Open Source</span>
-                    <span className="px-2 py-1 bg-tertiary/10 text-tertiary text-xs rounded-[5px]">Community</span>
+                    <span className="px-2 py-1 bg-darkBlue text-secondary text-xs rounded-[5px]">Open Source</span>
+                    <span className="px-2 py-1 bg-darkBlue text-secondary text-xs rounded-[5px]">Community</span>
                   </div>
-                  <a href="https://github.com/jeanluckashindi-pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-tertiary hover:text-tertiary/80 transition-colors text-sm">
+                  <a href="https://github.com/jeanluckashindi-pro" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors text-sm">
                     <ExternalLink className="w-4 h-4" />
                     Voir mes contributions
                   </a>
@@ -234,7 +234,7 @@ export default function ProjetsPersonnelsPage() {
               </div>
 
               {/* CTA */}
-              <div className="bg-gradient-to-br from-secondary/10 to-card-2 border border-secondary/30 rounded-xl p-8 text-center">
+              <div className="bg-gradient-to-br from-card-2 to-card-2 border border-secondary/30 rounded-xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Vous avez un projet en tête ?</h3>
                 <p className="text-white/70 mb-6 max-w-2xl mx-auto">
                   Ces projets personnels démontrent ma passion pour le développement et ma capacité à mener 
@@ -242,7 +242,7 @@ export default function ProjetsPersonnelsPage() {
                 </p>
                 <Link 
                   href="/contact" 
-                  className="inline-flex items-center justify-center gap-2 bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-background px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all hover:scale-105"
                 >
                   Discutons de votre projet
                 </Link>
